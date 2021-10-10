@@ -2,9 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Documen</title>
 </head>
 <body>
-<a href="/food/findAll">测试</a>
+    <div class="main">
+        <header class="header">
+            <div class="grid">
+                <div class="header__navbar">
+                    <div class="header__logo">
+                        <a href="" class="header__logo-link">MyFoodie</a>
+                    </div>
+    
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item"><a href="" class="header__navbar-item-link">Home</a></li>
+                        <li class="header__navbar-item"><a href="" class="header__navbar-item-link">Travel</a></li>
+                        <li class="header__navbar-item"><a href="" class="header__navbar-item-link">Recipes</a></li>
+                        <li class="header__navbar-item"><a href="" class="header__navbar-item-link">About us</a></li>
+                        <li class="header__navbar-item"><a href="" class="header__navbar-item-link">Mini game</a></li>
+    
+                        <li class="header__navbar-item"><a href="" class="header__navbar-icon-link"><i class="fas fa-search"></i></a></li>
+                        <li class="header__navbar-item"><a href="" class="header__navbar-icon-link"><i class="fab fa-twitter"></i></a></li>
+                        <li class="header__navbar-item"><a href="" class="header__navbar-icon-link"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="header__navbar-item"><a href="" class="header__navbar-icon-link"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="banner"></div>
+            <div class="section">
+                <div class="section__img">
+                    <img src="./assets/img/welcome.jpg" alt="">
+                </div>
+                <div class="section__info">
+                    <div class="info-grid">
+                        <h3 class="section__info-heading">
+                            Welcome to MyFoodie
+                        </h3>
+                        <p class="section__info-sub">
+                            Travel & Foods
+                        </p>
+                        <p class="section__info-text">
+                            This is a Food Blog, it's call MyFoodie, i hope you love it
+                            This is a Food Blog, it's call MyFoodie, i hope you love it
+                            This is a Food Blog, it's call MyFoodie, i hope you love it
+                            This is a Food Blog, it's call MyFoodie, i hope you love it
+                            This is a Food Blog, it's call MyFoodie, i hope you love it
+                            This is a Food Blog, it's call MyFoodie, i hope you love it
+                            This is a Food Blog, it's call MyFoodie, i hope you love it
+                        </p>
+                        <a href="" class="section__info-link">More...</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section__info">
+                    <div class="info-grid">
+                        <h3 class="section__info-heading">
+                            Welcome to MyFoodie
+                        </h3>
+                        <p class="section__info-sub">
+                            Travel & Foods
+                        </p>
+                        <p class="section__info-text">
+                            This is not Food Blog
+                            This is a Food Blog, it's call MyFoodie, i hope you love it
+                            This is a Food Blog, it's call MyFoodie, i hope you love it
+                            This is a Food Blog, it's call MyFoodie, i hope you love it
+                            This is a Food Blog, it's call MyFoodie, i hope you love it
+                            This is a Food Blog, it's call MyFoodie, i hope you love it
+                            This is a Food Blog, it's call MyFoodie, i hope you love it
+                        </p>
+                        <a href="" class="section__info-link">More...</a>
+                    </div>
+                </div>
+                <div class="section__img">
+                    <img src="./assets/img/travel.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+        <div class="footer"></div>
+    </div>
+    <!-- Sticky nav -->
+    <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
 </body>
 </html>
