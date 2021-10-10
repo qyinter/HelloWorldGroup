@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     transition: 0.6s;
-    padding: 28px 100px;
+    padding: 24px 100px;
     z-index: 100000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -25,10 +25,12 @@
     font-weight: 700;
     letter-spacing: 2px;
     transition: 0.6s;
+    line-height: 40px;
 }
 
 .header__navbar-list {
     display: flex;
+    align-items: center;
 }
 
 .header__navbar-item {
@@ -60,7 +62,8 @@
 /* StickyNavbar */
 .sticky {
     background: #fff;
-    padding: 14px 100px;
+    padding: 12px 100px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .sticky a {
@@ -85,6 +88,9 @@
 } */
 
 /* Introduce */
+.introduce-container {
+    width: 100%;
+}
 .intro-heading {
     text-align: center;
     margin: 0;
@@ -131,9 +137,22 @@
     right: calc(100% + 8px);
     background-color: rgba(0, 0, 0, 0.2);
 }
-/* Grid Column */
-.grid__column-2 img {
-    width: 100%;
+.intro__detail {
+    margin-top: 30px;
+    text-align: center
+}
+.intro__detail-heading,
+.intro__detail-heading strong {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+.intro__detail-text {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    text-align: justify;
+    margin: 30px 0 0 0;
 }
 /* Section */
 .section {
@@ -143,6 +162,15 @@
 
 .section__img {
     width: 50%;
+    border-radius: 8px;
+}
+.section__img--box-shadow {
+    box-shadow: rgb(38, 57, 77) 10px 20px 30px -10px;
+
+}
+.section__img--box-shadow-reverse {
+    box-shadow: rgb(38, 57, 77) -10px 20px 30px -10px;
+
 }
 
 .section__img--welcome {
@@ -155,7 +183,6 @@
 
 .section__info {
     width: 50%;
-    background-color: #00000009;
     color: var(--text-color);
     padding: 64px 0;
     display: flex;

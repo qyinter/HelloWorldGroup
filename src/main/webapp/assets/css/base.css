@@ -30,11 +30,20 @@ html {
     margin-right: -12px;
 }
 
-.grid__column-2 {
+.grid__column-3 {
     width: calc(2/6*100%);
     margin-top: 60px;
     padding-left: 45px;
     padding-right: 45px;
+}
+.grid__column-4 {
+    width: calc(2/8*100%);
+    margin-top: 50px;
+    padding: 0 30px;
+}
+.grid__column-3 img,
+.grid__column-4 img {
+    width: 100%;
 }
 
 .section__wrapper {
@@ -47,6 +56,12 @@ html {
     max-width: 350px;
     margin: 0 auto;
 }
+.grid--padding-90-120 {
+    padding: 90px 0 120px;
+}
 .grid--padding-120 {
     padding: 120px 0;
+}
+.primary-bg {
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
