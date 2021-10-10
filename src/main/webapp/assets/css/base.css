@@ -2,6 +2,8 @@
     --white-color:#fff;
     --black-color:#000;
     --text-color:#333;
+    --grey-color:#484848;
+    --sub-color:rgba(0, 0, 0,0.4);
 }
 * {
     box-sizing: inherit;
@@ -24,7 +26,17 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -45px;
+    margin-right: -45px;
 }
+
+.grid__column-2 {
+    width: calc(2/6*100%);
+    margin-top: 60px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
 .section__wrapper {
     padding-top: 100px;
 }
@@ -34,4 +46,7 @@ html {
 .info-grid {
     max-width: 350px;
     margin: 0 auto;
+}
+.grid--padding-120 {
+    padding: 120px 0;
 }
