@@ -26,8 +26,8 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -45px;
-    margin-right: -45px;
+    margin-left: -12px;
+    margin-right: -12px;
 }
 
 .grid__column-2 {

@@ -75,13 +75,14 @@
 .banner {
     position: relative;
     width: 100%;
-    /* background: url(../img/news-bg.jpg) no-repeat center/cover; */
+    height: 100vh;
+    background: url(../img/ice-cream-background.jpg) no-repeat center/cover;
 }
-#background-video {
+/* #background-video {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-}
+} */
 
 /* Introduce */
 .intro-heading {
@@ -154,8 +155,8 @@
 
 .section__info {
     width: 50%;
-    background-color: var(--black-color);
-    color: var(--white-color);
+    background-color: #00000009;
+    color: var(--text-color);
     padding: 64px 0;
     display: flex;
     align-items: center;
