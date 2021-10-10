@@ -6,7 +6,7 @@
     --sub-color:rgba(0, 0, 0,0.4);
 }
 * {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 html {
