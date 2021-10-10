@@ -75,8 +75,12 @@
 .banner {
     position: relative;
     width: 100%;
+    /* background: url(../img/news-bg.jpg) no-repeat center/cover; */
+}
+#background-video {
+    width: 100%;
     height: 100vh;
-    background: url(../img/news-bg.jpg) no-repeat center/cover;
+    object-fit: cover;
 }
 
 /* Introduce */
