@@ -150,15 +150,15 @@
 
 .section__info-heading {
     letter-spacing: 1px;
-    font-size: 3.2rem;
+    font-size: 3.6rem;
     font-weight: 600;
     margin: 0;
-    line-height: 3.2rem;
+    line-height: 3.6rem;
 }
 
 .section__info-sub {
-    font-size: 1.2rem;
-    margin: 0;
+    font-size: 1.6rem;
+    margin: 4px 0 0 0;
     opacity: 0.8;
     font-style: italic;
 }
@@ -172,16 +172,57 @@
 }
 
 .section__info-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 150px;
     text-decoration: none;
-    font-size: 1.8rem;
-    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    vertical-align: middle;
     color: var(--text-color);
-    background-color: #fff;
-    padding: 4px 8px;
-    border-radius: 2px;
-    transition: 0.2s;
+    padding: 16px 22px;
+    margin: 0 auto;
+    transition: all .2s ease;
 }
 
 .section__info-link:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--white-color);
+}
+
+.section__info-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 24px;
+    width: 48px;
+    height: 48px;
+    transition: all .3s ease;
+    background: rgba(83, 143, 45, 0.5);
+    z-index: -1;
+}
+
+.section__info-link:hover::before {
+    width: 100%;
+    background: rgba(83, 143, 45, 1);
+}
+
+.section__info-link:active {
+    transform: scale(.96);
+}
+
+.section__info-link-icon {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-left: 8px;
+}
+
+.section__info-link:hover .section__info-link-icon {
+    color: var(--white-color);
 }
