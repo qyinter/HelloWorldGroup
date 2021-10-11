@@ -16,9 +16,7 @@ html {
     line-height: 1.6rem;
     font-family: 'Ubuntu', sans-serif;
     /* font-family: 'Kosugi Maru', sans-serif; */
-    background-color: #FFFFFF;
-    scroll-behavior: smooth;
-}
+    background-color: #FFFFFF;}
 
 .grid {
     width: 1200px;
