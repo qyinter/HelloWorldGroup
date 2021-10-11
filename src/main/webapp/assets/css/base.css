@@ -12,7 +12,8 @@
 html {
     font-size: 62.5%;
     line-height: 1.6rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Kosugi Maru', sans-serif; */
     background-color: #FFFFFF;
 }
 .grid {
@@ -65,3 +66,4 @@ html {
 .primary-bg {
     background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
+/* Footer */
