@@ -67,3 +67,32 @@ html {
     background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
 /* Footer */
+.footer {
+    background-color: #333;
+}
+.footer__wrapper {
+    min-height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+.footer__social {
+    display: flex;
+}
+.footer__social a {
+    text-decoration: none;
+}
+.footer__social i {
+    font-size: 1.6rem;
+    color: #fff;
+}
+.footer__powered {
+    font-size: 1.6rem;
+    color: var(--white-color);
+    
+}
+.footer__powered span {
+
+}
