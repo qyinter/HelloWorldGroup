@@ -17,7 +17,7 @@ html {
     font-family: 'Ubuntu', sans-serif;
     /* font-family: 'Kosugi Maru', sans-serif; */
     background-color: #FFFFFF;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 body {
