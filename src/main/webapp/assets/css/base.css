@@ -14,14 +14,21 @@
 html {
     font-size: 62.5%;
     line-height: 1.6rem;
-    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     /* font-family: 'Kosugi Maru', sans-serif; */
+    font-family: 'Noto Sans JP', sans-serif;
     background-color: #FFFFFF;
     /* scroll-behavior: smooth; */
 }
 
 body {
     overflow: hidden visible;
+}
+h1,h2 {
+    font-family: 'Signika', sans-serif;
+}
+h3,h4,h5,h6,strong {
+    font-family: 'Hachi Maru Pop', cursive;
 }
 
 .main {
@@ -257,7 +264,6 @@ body {
 .sign-up__heading {
     font-size: 3.6rem;
     line-height: 4rem;
-    font-family: 'Signika', sans-serif;
     margin: 0 0 30px;
 }
 
@@ -389,6 +395,5 @@ body {
     color: var(--primary-color);
     font-weight: 600;
     font-style: italic;
-    font-family: 'Signika', sans-serif;
     letter-spacing: 1px;
 }
