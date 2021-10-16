@@ -66,6 +66,7 @@ h3,h4,h5,h6,strong {
 
 .grid__column-3 img,
 .grid__column-4 img {
+    vertical-align: middle;
     width: 100%;
 }
 
