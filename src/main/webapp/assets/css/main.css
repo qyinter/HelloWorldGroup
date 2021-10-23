@@ -389,7 +389,7 @@ h2 {
     font-size: 1.5rem;
     margin: 0 .5rem;
 }
-
+/* Modal  */
 .modal-content {
     position: relative;
     overflow: hidden;
@@ -406,3 +406,7 @@ h2 {
     width: 100%;
     height: 100%;
 }
+body.modal-open {
+    height: 100vh;
+    overflow-y: hidden;
+  }
