@@ -58,7 +58,6 @@ html,
 body {
     overflow-x: hidden;
 }
-
 /* Custom CSS Design */
 h1 {
     font-size: 3rem;
@@ -218,7 +217,6 @@ p {
     box-shadow: 0 0 3px #555!important;
     transition: all .4s ease-out 0s;
     z-index: 999999;
-    display:none;
 }
 .back-top-btn:hover {
     color: var(--primary-color);
@@ -239,3 +237,6 @@ p {
     0%   { opacity: 0; }
     100% { opacity: 1; }
   }
+.card {
+    background: none;
+}
