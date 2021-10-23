@@ -11,14 +11,14 @@
 }
 
 .navbar-brand {
-    font-size: 1.875rem;
-    font-weight: 700;
-    font-family: 'Signika', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: 'Birthstone Bounce', cursive;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
     transition: .3s ease-out;
     color: var(--white-color);
-
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 40px var(--primary-color);
 }
 .navbar-toggler {
     border: 1px solid var(--white-color);
@@ -69,7 +69,9 @@
     text-shadow: none;
     color: var(--black-color) !important;
 }
-
+.sticky .navbar-brand {
+    font-size: 2.5rem;
+}
 .sticky .nav-link:hover,
 .sticky .nav-link.active {
     color: var(--primary-color) !important;
@@ -309,6 +311,26 @@ h2 {
     padding: 10px 45px;
 }
 /* Videos Section */
+.playback-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+}
+.gallery-item:hover .playback-btn {
+    visibility: visible;
+    opacity: 1;
+}
+.playback-img {
+    width:100px;
+}
+.video-section .g-caption {
+    height: 100%;
+    padding-top: 32px;
+}
 /* Footer */
 .gallery-bg {
     padding-top: 16.66667%;

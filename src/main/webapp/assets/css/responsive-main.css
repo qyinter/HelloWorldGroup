@@ -230,4 +230,10 @@
     .gallery-grid--video {
         grid-template-rows: 250px 150px 150px 200px;
     }
+    .playback-img {
+        width: 40px;
+    }
+    .video-section .g-caption {
+        padding-top: 12px;
+    }
 }
