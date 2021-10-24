@@ -12,12 +12,33 @@
   <link rel="stylesheet" href="./assets/css/base.css">
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/responsive-main.css">
+  <link rel="stylesheet" href="./assets/css/preload.css">
 </head>
 <body>
+  <!-- Preloader -->
+  <div id="preload">
+    <h1>Cooking in progress..</h1>
+    <div id="cooking">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div id="area">
+        <div id="sides">
+          <div id="pan"></div>
+          <div id="handle"></div>
+        </div>
+        <div id="pancake">
+          <div id="pastry"></div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Navigation -->
   <header>
     <nav class="navbar navbar-expand-md navigation-wrapper">
-      <div class="container-md px-0 px-md-3">
+      <div class="container-md px-0 px-md-3 nav-custom">
         <a class="navbar-brand p-0" href="#">
           MyFoodie
         </a>
@@ -353,25 +374,26 @@
 </footer>
 
 
-<!-- Video Modal -->
-<div class="modal px-0 fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content">
-      <iframe title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="addVideo"></iframe>
+  <!-- Video Modal -->
+  <div class="modal px-0 fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <iframe title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="addVideo"></iframe>
+      </div>
     </div>
   </div>
-</div>
-<!-- Back to top -->
-<button type="button" class="btn btn-floating btn-lg back-top-btn" id="back-top"
-  data-aos="fade-up" data-aos-anchor=".welcome" data-aos-once="false"
->
-  <i class="fas fa-angle-double-up"></i>
-</button>
+  <!-- Back to top -->
+  <button type="button" class="btn btn-floating btn-lg back-top-btn" id="back-top"
+    data-aos="fade-up" data-aos-anchor=".welcome" data-aos-once="false"
+  >
+    <i class="fas fa-angle-double-up"></i>
+  </button>
   <!-- Script -->
   <script src="./assets/js/back-top.js"></script>
   <script src="./assets/js/slow-scroll.js"></script>
   <script src="./assets/js/sticky-nav.js"></script>
   <script src="./assets/js/varying-modal.js"></script>
+  <script src="./assets/js/preload.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
