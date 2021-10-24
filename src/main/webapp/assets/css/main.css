@@ -18,7 +18,6 @@
     letter-spacing: 1px;
     transition: .3s ease-out;
     color: var(--white-color);
-    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 40px var(--primary-color);
 }
 
 .navbar-toggler {
