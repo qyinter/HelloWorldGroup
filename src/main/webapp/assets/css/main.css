@@ -332,6 +332,12 @@ h2 {
 }
 
 /* Videos Section */
+.lemon-bg {
+    background: url(../img/lemon.png), url(../img/lemon.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 30%, 70%;
+    background-size: contain, contain;
+}
 .playback-btn {
     position: absolute;
     top: 50%;
