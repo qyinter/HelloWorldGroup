@@ -11,11 +11,13 @@
 }
 
 .navbar-brand {
-    font-size: 3rem;
+    font-size: 2.75rem;
     font-weight: 500;
-    font-family: 'Birthstone Bounce', cursive;
+    /* font-family: 'Birthstone Bounce', cursive; */
     /* text-transform: uppercase; */
     letter-spacing: 1px;
+    font-family: 'Jokerman', sans-serif;
+    color:#fdf474!important;
     transition: .3s ease-out;
     color: var(--white-color);
 }
@@ -73,7 +75,9 @@
 }
 
 .sticky .navbar-brand {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
+    color:#000 !important;
+
 }
 
 .sticky .nav-link:hover,
