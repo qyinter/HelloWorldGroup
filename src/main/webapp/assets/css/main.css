@@ -18,8 +18,8 @@
     letter-spacing: 1px;
     transition: .3s ease-out;
     color: var(--white-color);
-    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 40px var(--primary-color);
 }
+
 .navbar-toggler {
     border: 1px solid var(--white-color);
 }
@@ -54,9 +54,11 @@
 .nav-item:nth-child(n+6) .nav-link {
     padding: .5rem .375rem;
 }
+
 .nav-icon {
     font-size: 1.25rem;
 }
+
 .sticky {
     background-color: var(--white-color) !important;
     padding: .75rem 0;
@@ -69,9 +71,11 @@
     text-shadow: none;
     color: var(--black-color) !important;
 }
+
 .sticky .navbar-brand {
     font-size: 2.5rem;
 }
+
 .sticky .nav-link:hover,
 .sticky .nav-link.active {
     color: var(--primary-color) !important;
@@ -182,12 +186,12 @@ h2 {
     grid-gap: 16px;
     padding: 16px;
     grid-template-areas:
-    "h1 h1 h2 h2 h2 h2"
-    "h1 h1 h2 h2 h2 h2"
-    "h1 h1 h5 h5 h3 h3"
-    "h1 h1 h5 h5 h3 h3"
-    "h4 h4 h4 h4 h3 h3"
-    "h4 h4 h4 h4 h3 h3"
+        "h1 h1 h2 h2 h2 h2"
+        "h1 h1 h2 h2 h2 h2"
+        "h1 h1 h5 h5 h3 h3"
+        "h1 h1 h5 h5 h3 h3"
+        "h4 h4 h4 h4 h3 h3"
+        "h4 h4 h4 h4 h3 h3"
 }
 
 .gallery-item {
@@ -225,6 +229,7 @@ h2 {
 .gallery-img {
     z-index: -1;
 }
+
 .gallery-img.img-fluid {
     height: 100%;
     width: 100%;
@@ -256,60 +261,72 @@ h2 {
     visibility: visible;
     opacity: 1;
 }
+
 .gallery-item:hover {
     cursor: pointer;
 }
+
 .g-caption {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    visibility:hidden;
+    visibility: hidden;
     opacity: 0;
     z-index: 5;
     animation: fadeIn 1s;
 }
-.gallery-item:hover .g-caption {
+
+.popular-section .gallery-item:hover .g-caption {
     top: 50%;
     transform: translateY(-50%);
     visibility: visible;
     opacity: 1;
 }
+
 .g-caption__heading {
     font-size: 3.125rem;
     margin: 0;
     color: var(--white-color);
 }
+
 .g-caption__sub {
     color: var(--white-color);
     font-size: 1rem;
 }
+
 .white-btn:hover,
 .white-btn:hover .more-btn-icon {
-    color: var(--white-color)!important;
-    border-color: var(--white-color)!important;
+    color: var(--white-color) !important;
+    border-color: var(--white-color) !important;
 }
+
 /* About Us Section */
 .about-us p {
-    text-align: justify!important;
+    text-align: justify !important;
 }
+
 .about-us .section__heading {
     line-height: 2.5rem;
 }
+
 .about-us .section__sub {
     color: var(--text-gray);
     font-size: .875rem;
     font-style: italic;
 }
+
 .about-us__img {
     border-radius: 10px;
     box-shadow: 0 0 20px #555;
 }
+
 /* Newsletter Section */
 .news-letter .main-btn {
-    letter-spacing:1px;
+    letter-spacing: 1px;
     padding: 10px 45px;
 }
+
 /* Videos Section */
 .playback-btn {
     position: absolute;
@@ -320,22 +337,33 @@ h2 {
     visibility: hidden;
     opacity: 0;
 }
+
 .gallery-item:hover .playback-btn {
     visibility: visible;
     opacity: 1;
 }
+
 .playback-img {
-    width:100px;
+    width: 100px;
 }
+
 .video-section .g-caption {
-    height: 100%;
-    padding-top: 32px;
+    padding:16px 0;
+    visibility: visible;
+    opacity: 1;
+    background-color: rgba(17, 17, 17, 0.4);
 }
+
+.video-section .g-caption__sub {
+    margin: 0;
+}
+
 /* Footer */
 .gallery-bg {
     padding-top: 16.66667%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
+
 .footer__bottom {
     background-color: #111;
 }
@@ -346,6 +374,7 @@ h2 {
     color: var(--white-color);
     font-size: 1.25rem;
 }
+
 .footer__powered span {
     color: var(--primary-color);
     font-family: var(--secondary-font);
@@ -354,7 +383,30 @@ h2 {
     font-style: italic;
     text-shadow: 0 0 50px #fff;
 }
+
 .footer__social i {
     font-size: 1.5rem;
     margin: 0 .5rem;
 }
+/* Modal  */
+.modal-content {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.modal-content iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+body.modal-open {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
