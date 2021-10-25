@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&family=Noto+Sans+JP:wght@300;500;700;900&family=Signika:wght@300;400;500;600;700&display=swap');
 @import url('http://fonts.cdnfonts.com/css/jokerman');
+
 *,
 *:before,
 *:after {
@@ -212,29 +213,95 @@ p {
     right: 20px;
     bottom: 20px;
     color: var(--white-color);
-    box-shadow: 0 0 3px #555!important;
+    box-shadow: 0 0 3px #555 !important;
     transition: all .4s ease-out 0s;
     z-index: 999999;
 }
+
 .back-top-btn:hover {
     color: var(--primary-color);
 }
+
 @-webkit-keyframes fadeIn {
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  @-moz-keyframes fadeIn {
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  @-o-keyframes fadeIn {
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  @keyframes fadeIn {
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
-  }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 .card {
     background: none;
 }

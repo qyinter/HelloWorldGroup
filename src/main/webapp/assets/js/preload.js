@@ -1,3 +1,4 @@
 window.onload = function(){
-    $('#preload').css('display','none');
+    $('#preload').css('opacity','0');
+    $('#preload').css('visibility','hidden');
 }
