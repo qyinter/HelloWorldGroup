@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie</title>
+  <!-- Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Own Css -->
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/recipe-single.css">
+  <link rel="stylesheet" href="./assets/css/responsive-recipe-single.css">
+  <link rel="stylesheet" href="./assets/css/preload.css">
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preload">
+    <h1>Cooking in progress..</h1>
+    <div id="cooking">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div id="area">
+        <div id="sides">
+          <div id="pan"></div>
+          <div id="handle"></div>
+        </div>
+        <div id="pancake">
+          <div id="pastry"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-md navigation-wrapper">
+      <div class="container-md px-0 px-md-3 nav-custom">
+        <a class="navbar-brand p-0" href="#">
+          MyFoodie
+        </a>
+        <button class="navbar-toggler me-3 me-md-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-stream navbar-toggler-icon text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Recipes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mini game</a>
+            </li>
+            <div class="row gx-0">
+              <div class="col-3 p-0">
+                <li class="nav-item">
+                  <a class="nav-link nav-link--custom nav-link--youtube" href="#"><i class="nav-icon fab fa-youtube"
+                      aria-hidden="true"></i></a>
+                </li>
+              </div>
+              <div class="col-3 p-0">
+                <li class="nav-item">
+                  <a class="nav-link nav-link--custom nav-link--twitter" href="#"><i class="nav-icon fab fa-twitter"
+                      aria-hidden="true"></i></a>
+                </li>
+              </div>
+              <div class="col-3 p-0">
+                <li class="nav-item">
+                  <a class="nav-link nav-link--custom nav-link--facebook" href="#"><i class="nav-icon fab fa-facebook"
+                      aria-hidden="true"></i></a>
+                </li>
+              </div>
+              <div class="col-3 p-0">
+                <li class="nav-item">
+                  <a class="nav-link nav-link--custom nav-link--instagram" href="#"><i class="nav-icon fab fa-instagram"
+                      aria-hidden="true"></i></a>
+                </li>
+              </div>
+            </div>
+
+
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Top banner -->
+  <section class="top-banner">
+    <div class="container-fluid px-0">
+      <div class="banner-bg" style="background: url(./assets/img/g-big-1.jpg) no-repeat center/cover;"></div>
+      <div class="banner-text d-flex justify-content-center align-items-center">
+        <h1 class="banner-title text-white text-center">TTEOKBOKKI</h1>
+      </div>
+    </div>
+  </section>
+  <!-- Main Section -->
+  <section class="main-section px-3 px-lg-0">
+    <div class="container-lg section-padding">
+      <div class="description">
+        <div class="row g-5">
+          <div class="col-12 col-md-8">
+            <h5 class="description__heading"><i class="fas fa-info-circle"></i>Description</h5>
+            <p class="description__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat, diam sed
+              semper gravida, dolor arcu luctus lacus, suscipit interdum nibh massa sed massa. Mauris facilisis lectus
+              quis pulvinar congue. Ut at aliquet odio, vel molestie quam ligula condimentum, sit amet consectetur nibh
+              sollicitudin. Nunc ipsum tellus, tristique vel tincidunt ac, finibus blandit ipsum. Nulla bibendum
+              bibendum molestie. In at sollicitudin tortor, sit amet porttitor nisl. Aliquam erat volutpat. Nullam eu
+              velit pretium, eleifend arcu nec, auctor eros. Nulla maximus commodo magna, eu malesuada lorem
+              sollicitudin at. Nunc lorem massa, eleifend ut laoreet et, elementum sit amet risus. Aenean mattis velit
+              in .</p>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="info-list">
+              <p class="info-item"><span class="info-icon-text"><i class="fas fa-filter"></i>Category</span><span
+                  class="info-additional">Food</span></p>
+              <p class="info-item"><span class="info-icon-text"><i class="fas fa-hourglass-half"></i>Cook time</span
+                  class="info-additional"> <span>20 min</span></p>
+              <p class="info-item"><span class="info-icon-text"><i class="fas fa-running"></i>Energy</span><span
+                  class="info-additional">169kcal</span></p>
+              <p class="info-item"><span class="info-icon-text"><i class="fas fa-globe-asia"></i>Cuisine</span><span
+                  class="info-additional">Japan</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="material mt-5">
+        <h5 class="main__heading"><i class="fas fa-pepper-hot"></i>Materials</h5>
+        <p class="main__text">First of all, check if you have all the necessary ingredients for this recipe. Pay
+          attention to the quantities!</p>
+        <div class="form-check">
+          <ul>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_1">
+              <label class="form-check-label" for="material_1">
+                1/4 cup butter, softened
+              </label>
+            </li>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_2">
+              <label class="form-check-label" for="material_2">
+                2/3 cup butter
+              </label>
+            </li>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_3">
+              <label class="form-check-label" for="material_3">
+                3 3/4 cups all-purpose flour
+              </label>
+            </li>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_4">
+              <label class="form-check-label" for="material_4">
+                1/2 cup warm water (110 degrees F/45 degrees C)
+              </label>
+            </li>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_5">
+              <label class="form-check-label" for="material_5">
+                1/2 cup warm milk
+              </label>
+            </li>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_6">
+              <label class="form-check-label" for="material_6">
+                1 (.25 ounce) package active dry yeast
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="instruction mt-5">
+        <h5 class="main__heading"><i class="far fa-clipboard"></i>The Steps</h5>
+        <p class="main__text">Next, follow the steps to finalize your dish and finally be able to enjoy it!</p>
+        <div class="instruction__steps">
+          <ol>
+            <li>
+              <p>Bake in preheated oven for 30 to 35 minutes, until golden.</p>
+              <div class="row g-3 mt-3">
+                <div class="col-12 col-md-3">
+                  <div class="instruction__img"
+                    style="background: url(./assets/img/gallery-3.jpg) no-repeat center/cover;"></div>
+                </div>
+                <div class="col-12 col-md-3">
+                  <div class="instruction__img"
+                    style="background: url(./assets/img/gallery-4.jpg) no-repeat center/cover;"></div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <p>In a small bowl, mix mayonnaise, garlic, oregano, salt , and pepper. Set aside.</p>
+            </li>
+            <li>
+              <p>Bring a large pot of salted water to a boil. Add potatoes, and cook until almost done, about 10
+                minutes.
+                Don't overcook otherwise the potatoes will break apart. Drain, and cool.</p>
+              <div class="row g-3 mt-3">
+                <div class="col-12 col-md-3">
+                  <div class="instruction__img"
+                    style="background: url(./assets/img/gallery-5.jpg) no-repeat center/cover;"></div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <p>Preheat oven broiler. Line a baking tray with aluminum foil, and lightly grease the aluminum foil.</p>
+              <div class="row g-3 mt-3">
+                <div class="col-12 col-md-3">
+                  <div class="instruction__img"
+                    style="background: url(./assets/img/gallery-1.jpg) no-repeat center/cover;"></div>
+                </div>
+                <div class="col-12 col-md-3">
+                  <div class="instruction__img"
+                    style="background: url(./assets/img/gallery-2.jpg) no-repeat center/cover;"></div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <p>Arrange potatoes in the prepared baking tray. Spoon the mayonnaise mixture over the potatoes. Place on
+                the prepared grill, and cook until potatoes are tender and mayonnaise mixture is lightly browned, about
+                10
+                minutes.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="row g-0">
+      <div class="col-2 gallery-bg-footer" style="background: url(./assets/img/gallery-1.jpg)no-repeat center/cover;">
+      </div>
+      <div class="col-2 gallery-bg-footer" style="background: url(./assets/img/gallery-2.jpg)no-repeat center/cover;">
+      </div>
+      <div class="col-2 gallery-bg-footer" style="background: url(./assets/img/gallery-3.jpg)no-repeat center/cover;">
+      </div>
+      <div class="col-2 gallery-bg-footer" style="background: url(./assets/img/gallery-4.jpg)no-repeat center/cover;">
+      </div>
+      <div class="col-2 gallery-bg-footer" style="background: url(./assets/img/gallery-5.jpg)no-repeat center/cover;">
+      </div>
+      <div class="col-2 gallery-bg-footer" style="background: url(./assets/img/gallery-6.jpg)no-repeat center/cover;">
+      </div>
+    </div>
+    <div class="container-fluid footer__bottom section-padding">
+      <div class="container text-center">
+        <p class="footer__powered text-white">
+          Copyright ©2021 All rights reserved by <span>HelloWorldGroup</span>
+        </p>
+        <div class="footer__social">
+          <a href="#"> <i class="fab fa-facebook    "></i> </a>
+          <a href="#"> <i class="fab fa-twitch    "></i> </a>
+          <a href="#"> <i class="fab fa-youtube    "></i> </a>
+          <a href="#"> <i class="fab fa-instagram    "></i> </a>
+          <a href="#"> <i class="fab fa-discord    "></i> </a>
+          <a href="#"> <i class="fab fa-reddit    "></i> </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="btn btn-floating btn-lg back-top-btn" id="back-top" data-aos="fade-up"
+    data-aos-anchor=".welcome" data-aos-once="false">
+    <i class="fas fa-angle-double-up"></i>
+  </button>
+  <!-- Script -->
+  <script src="./assets/js/back-top.js"></script>
+  <script src="./assets/js/slow-scroll.js"></script>
+  <script src="./assets/js/sticky-nav.js"></script>
+  <script src="./assets/js/varying-modal.js"></script>
+  <script src="./assets/js/preload.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      delay: 100,
+      duration: 1200,
+      easing: 'ease-out',
+      once: true,
+    });
+  </script>
+</body>
+
+</html>
