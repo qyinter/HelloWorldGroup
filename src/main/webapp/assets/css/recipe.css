@@ -70,8 +70,10 @@
 .recipe-caption {
     position: absolute;
     left: 0;
+    right: 0;
     bottom: 0;
-    padding: 0 24px;
+    padding: 1rem 1.5rem;
+    background-color: rgba(0, 0, 0, .7);
 }
 
 .recipe-caption__heading {
@@ -83,6 +85,7 @@
 .recipe-caption__sub {
     color: #fff;
     font-size: .875rem;
+    margin: 0;
 }
 
 /* Pagination Nav */
