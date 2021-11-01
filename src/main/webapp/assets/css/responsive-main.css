@@ -144,6 +144,9 @@
         "h1 h3"
         "h4 h5"
     }
+    .lemon-bg {
+        background-position: left, right;
+    }
     /* Footer */
 }
 
@@ -188,5 +191,9 @@
     }
     .video-section .g-caption {
         padding-top: 12px;
+    }
+    /* Lemon BG */
+    .lemon-bg {
+        background-position: -25%, 125%;
     }
 }

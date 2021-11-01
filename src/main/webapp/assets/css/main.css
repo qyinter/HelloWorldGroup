@@ -60,20 +60,18 @@ h2 {
 }
 
 .welcome .card {
-    margin-top: 30px;
     padding: 0 45px;
     border: none;
-}
-
-.welcome .card -body {
     margin-top: 15px;
 }
 
 .welcome .card-title {
-    font-style: italic;
+    /* font-style: italic; */
     font-size: 2.25rem;
 }
-
+.welcome .card-text {
+    text-align: justify;
+}
 .card-title span {
     color: var(--black-color);
     font-weight: 400;

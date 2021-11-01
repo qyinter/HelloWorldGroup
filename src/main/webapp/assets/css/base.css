@@ -244,6 +244,7 @@ p {
     color:#fdf474!important;
     transition: .3s ease-out;
     color: var(--white-color);
+    margin: 0 0 0 1rem;
 }
 
 .navbar-toggler {
