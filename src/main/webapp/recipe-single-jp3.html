@@ -42,61 +42,64 @@
   <!-- Navigation -->
   <header>
     <nav class="navbar navbar-expand-md navigation-wrapper">
-      <div class="container-md px-0 px-md-3 nav-custom">
+      <div class="container-lg px-0 px-md-3 nav-custom">
         <a class="navbar-brand p-0" href="#">
           MyFoodie
         </a>
-        <button class="navbar-toggler me-3 me-md-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler me-3 me-md-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-stream navbar-toggler-icon text-white"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Recipes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Mini game</a>
-            </li>
-            <div class="row gx-0">
-              <div class="col-3 p-0">
-                <li class="nav-item">
-                  <a class="nav-link nav-link--custom nav-link--youtube" href="#"><i class="nav-icon fab fa-youtube"
-                      aria-hidden="true"></i></a>
-                </li>
+        
+        <!-- Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">MyFoodie</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home<i class="next-icon fas fa-angle-double-right"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="recipe.html">Recipes<i class="next-icon fas fa-angle-double-right"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About us<i class="next-icon fas fa-angle-double-right"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact<i class="next-icon fas fa-angle-double-right"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Mini game<i class="next-icon fas fa-angle-double-right"></i></a>
+              </li>
+              <li class="nav-item nav-item--no-border text-center">
+                <a class="nav-link follow-link" href="#">Subscribe us</a>
+              </li>
+              <div class="row gx-0">
+                <div class="col-sm-6 col-md-3 p-0">
+                  <li class="nav-item">
+                    <a class="nav-link nav-link--custom nav-link--youtube" href="#"><i class="nav-icon fab fa-youtube" aria-hidden="true"></i><span>Youtube</span></a>
+                  </li>
+                </div>
+                <div class="col-sm-6 col-md-3 p-0">
+                  <li class="nav-item">
+                    <a class="nav-link nav-link--custom nav-link--twitter" href="#"><i class="nav-icon fab fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
+                  </li>
+                </div>
+                <div class="col-sm-6 col-md-3 p-0">
+                  <li class="nav-item">
+                    <a class="nav-link nav-link--custom nav-link--facebook" href="#"><i class="nav-icon fab fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+                  </li>
+                </div>
+                <div class="col-sm-6 col-md-3 p-0">
+                  <li class="nav-item">
+                    <a class="nav-link nav-link--custom nav-link--instagram" href="#"><i class="nav-icon fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                  </li>
+                </div>
               </div>
-              <div class="col-3 p-0">
-                <li class="nav-item">
-                  <a class="nav-link nav-link--custom nav-link--twitter" href="#"><i class="nav-icon fab fa-twitter"
-                      aria-hidden="true"></i></a>
-                </li>
-              </div>
-              <div class="col-3 p-0">
-                <li class="nav-item">
-                  <a class="nav-link nav-link--custom nav-link--facebook" href="#"><i class="nav-icon fab fa-facebook"
-                      aria-hidden="true"></i></a>
-                </li>
-              </div>
-              <div class="col-3 p-0">
-                <li class="nav-item">
-                  <a class="nav-link nav-link--custom nav-link--instagram" href="#"><i class="nav-icon fab fa-instagram"
-                      aria-hidden="true"></i></a>
-                </li>
-              </div>
-            </div>
-
-
-
-          </ul>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
