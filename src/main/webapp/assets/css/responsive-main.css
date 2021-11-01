@@ -103,54 +103,7 @@
     }
 
     /* Navigation */
-    .navigation-wrapper .navbar-nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: var(--white-color);
-    }
-    .navigation-wrapper .nav-item {
-        text-align: center;
-        margin: 0;
-    }
-    .navigation-wrapper .nav-link {
-        line-height: 2.5rem;
-        text-shadow: none;
-        color: var(--black-color);
-        border-bottom: 1px solid rgba(17, 17, 17, 0.1);
-    }
-    .nav-link.nav-link--custom {
-        color: var(--white-color)!important;
-        border-top: 1px solid rgba(17, 17, 17, 0.5)!important;
-        border-bottom: 1px solid rgba(17, 17, 17, 0.5)!important;
-        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-    }
-    .nav-link.nav-link--custom .nav-icon {
-        font-size: 1.25rem;
-    }
-    .nav-link.nav-link--youtube {
-        background:linear-gradient(120deg, #ff0000, #282828);
-        border-right: 1px solid rgba(17, 17, 17, 0.5);
-    }
-    .nav-link.nav-link--twitter {
-        border-right: 1px solid rgba(17, 17, 17, 0.5);
-        background:linear-gradient(45deg, #66757f, #00ACEE, #36D8FF, #f5f8fa, #ffffff);
-    }
-    .nav-link.nav-link--facebook {
-        border-right: 1px solid rgba(17, 17, 17, 0.5);
-        background:linear-gradient(120deg, #3b5998, #FFFFFF);
-    }
-    .nav-link.nav-link--instagram {
-        background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-    }
-    .navigation-wrapper.sticky .navbar-nav {
-        background-color: rgba(17, 17, 17, 0.99);
-    }
-    .navigation-wrapper.sticky .nav-link {
-        color: var(--white-color)!important;
-        border-bottom: 1px solid rgba(237, 237, 237, 0.1);
-    }
+    
     /* Top banner */
     .top-banner .input-group {
         width: 80%;
