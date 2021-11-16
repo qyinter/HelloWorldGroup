@@ -437,11 +437,11 @@ p {
 input:focus {
     box-shadow: none!important;
 }
-body.modal-open {
+/* body.modal-open {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-}
+} */
 
 @-webkit-keyframes fadeIn {
     0% {
