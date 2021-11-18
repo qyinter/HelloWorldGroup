@@ -21,14 +21,14 @@
         let name = getParameter("name");
 
         $.get("http://helloworld.qyinter.cn/food/findByName?name="+name,{},function (data) {
-            $('#search-key-word').html(unescape(name))
+            $('#search-key-word').html(decodeURI(name))
             let str = ''
             for (let i = 0; i < data.length; i++) {
                 str  += '<div class="col-12 col-md-4">'+
                     '<div class="recipe-wrapper">'+
                     '<div class="recipe-bg">'+
                     '<a href="recipe-single.html?rid=' + data[i].rid + '" class="recipe-link">'+
-                    '<div class="recipe-bg-container" style="background: url(https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=780&q=80);"></div>'+
+                    '<div class="recipe-bg-container" style="background: url('+data[i].small_imgs+');"></div>'+
                     '</a>'+
                     '</div>'+
                     '<div class="recipe-label">'+
