@@ -45,7 +45,8 @@
                 '</label>'+
                 '</li>'
       }
-
+      let str_beijing = '<div class="banner-bg" style="background: url('+data.big_imgs+') no-repeat center/cover;"></div>'
+      $('#beijing').html(str_beijing)
       $('#food_ul').html(strs)
       let food_methodArr = data.making_method.split('|')
       let strs_ol= ''
@@ -143,8 +144,8 @@
 </header>
 <!-- Top banner -->
 <section class="top-banner">
-  <div class="container-fluid px-0">
-    <div class="banner-bg" style="background: url(assets/img/food/food-jp1.JPG) no-repeat center/cover;"></div>
+  <div class="container-fluid px-0" id="beijing">
+    
     <div class="banner-text d-flex justify-content-center align-items-center">
       <h1 class="banner-title text-white text-center" id="food_name">富山ブラック</h1>
     </div>
