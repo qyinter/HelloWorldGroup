@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie</title>
+  <!-- Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Own Css -->
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/recipe-single.css">
+  <link rel="stylesheet" href="./assets/css/responsive-recipe-single.css">
+  <link rel="stylesheet" href="./assets/css/preload.css">
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preload">
+    <h1>Cooking in progress..</h1>
+    <div id="cooking">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div id="area">
+        <div id="sides">
+          <div id="pan"></div>
+          <div id="handle"></div>
+        </div>
+        <div id="pancake">
+          <div id="pastry"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-md navigation-wrapper">
+      <div class="container-lg px-0 px-md-3 nav-custom">
+        <a class="navbar-brand p-0" href="#">
+          MyFoodie
+        </a>
+        <button class="navbar-toggler me-3 me-md-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-stream navbar-toggler-icon text-white"></i>
+        </button>
+        
+        <!-- Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">MyFoodie</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home<i class="next-icon fas fa-angle-double-right"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="recipe.html">Recipes<i class="next-icon fas fa-angle-double-right"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About us<i class="next-icon fas fa-angle-double-right"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact<i class="next-icon fas fa-angle-double-right"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Mini game<i class="next-icon fas fa-angle-double-right"></i></a>
+              </li>
+              <li class="nav-item nav-item--no-border text-center">
+                <a class="nav-link follow-link" href="#">Subscribe us</a>
+              </li>
+              <div class="row gx-0">
+                <div class="col-sm-6 col-md-3 p-0">
+                  <li class="nav-item">
+                    <a class="nav-link nav-link--custom nav-link--youtube" href="#"><i class="nav-icon fab fa-youtube" aria-hidden="true"></i><span>Youtube</span></a>
+                  </li>
+                </div>
+                <div class="col-sm-6 col-md-3 p-0">
+                  <li class="nav-item">
+                    <a class="nav-link nav-link--custom nav-link--twitter" href="#"><i class="nav-icon fab fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
+                  </li>
+                </div>
+                <div class="col-sm-6 col-md-3 p-0">
+                  <li class="nav-item">
+                    <a class="nav-link nav-link--custom nav-link--facebook" href="#"><i class="nav-icon fab fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+                  </li>
+                </div>
+                <div class="col-sm-6 col-md-3 p-0">
+                  <li class="nav-item">
+                    <a class="nav-link nav-link--custom nav-link--instagram" href="#"><i class="nav-icon fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Top banner -->
+  <section class="top-banner">
+    <div class="container-fluid px-0">
+      <div class="banner-bg" style="background: url(./assets/img/food/food-jp6.JPG) no-repeat center/cover;"></div>
+      <div class="banner-text d-flex justify-content-center align-items-center">
+        <h1 class="banner-title text-white text-center">牛ハンバーグ</h1>
+      </div>
+    </div>
+  </section>
+  <!-- Main Section -->
+  <section class="main-section px-3 px-lg-0">
+    <div class="container-lg section-padding">
+      <div class="description">
+        <div class="row g-5">
+          <div class="col-12 col-md-8">
+            <h5 class="description__heading"><i class="fas fa-info-circle"></i>紹介</h5>
+            <p class="description__text">ハンバーグの名はドイツの都市ハンブルクに由来する。正式名称はハンバーグステーキ、あるいはハンバーガーステーキ。</p>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="info-list">
+              <p class="info-item"><span class="info-icon-text"><i class="fas fa-filter"></i>カテゴリー</span><span
+                  class="info-additional">料理</span></p>
+              <p class="info-item"><span class="info-icon-text"><i class="fas fa-hourglass-half"></i>調理時間</span
+                  class="info-additional"> <span>30 min</span></p>
+              <p class="info-item"><span class="info-icon-text"><i class="fas fa-running"></i>カロリー</span><span
+                  class="info-additional">540 kcal</span></p>
+              <p class="info-item"><span class="info-icon-text"><i class="fas fa-globe-asia"></i>国</span><span
+                  class="info-additional">日本</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="material mt-5">
+        <h5 class="main__heading"><i class="fas fa-pepper-hot"></i>材料</h5>
+        <!-- <p class="main__text"> </p> -->
+        <div class="form-check">
+          <ul>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_1">
+              <label class="form-check-label" for="material_1">
+                牛ひき肉200g
+              </label>
+            </li>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_2">
+              <label class="form-check-label" for="material_2">
+                卵1個
+              </label>
+            </li>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_3">
+              <label class="form-check-label" for="material_3">
+                玉ねぎ1/4個
+              </label>
+            </li>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_4">
+              <label class="form-check-label" for="material_4">
+                パン粉大さじ4
+              </label>
+            </li>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_5">
+              <label class="form-check-label" for="material_5">
+                ナツメグ少々
+              </label>
+            </li>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_6">
+              <label class="form-check-label" for="material_6">
+                塩小さじ1/4
+              </label>
+            </li>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_7">
+              <label class="form-check-label" for="material_7">
+                こしょう少々
+              </label>
+            </li>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_8">
+              <label class="form-check-label" for="material_8">
+                ウスターソース大さじ1と1/2
+              </label>
+            </li>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_9">
+              <label class="form-check-label" for="material_9">
+                ケチャップ大さじ1と1/2
+              </label>
+            </li>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_10">
+              <label class="form-check-label" for="material_10">
+                有塩バター10g
+              </label>
+            </li>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_11">
+              <label class="form-check-label" for="material_11">
+                サラダ油大さじ1
+              </label>
+            </li>
+            <li>
+              <input class="form-check-input" type="checkbox" value="" id="material_12">
+              <label class="form-check-label" for="material_12">
+                油(焼く用)
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="instruction mt-5">
+        <h5 class="main__heading"><i class="far fa-clipboard"></i>レシピ</h5>
+        <!-- <p class="main__text">Next, follow the steps to finalize your dish and finally be able to enjoy it!</p> -->
+        <div class="instruction__steps">
+          <ol>
+            <li>
+              <p>玉ねぎはみじん切りにする。</p>
+              <!-- <div class="row g-3 mt-3">
+                <div class="col-12 col-md-3">
+                  <div class="instruction__img"
+                    style="background: url(./assets/img/gallery-3.jpg) no-repeat center/cover;"></div>
+                </div> -->
+
+            </li>
+            <li>
+              <p>フライパンにサラダ油を入れて中火で熱し、玉ねぎを入れてしんなりするまで炒める。取り出して粗熱をとる。</p>
+            </li>
+            <li>
+              <p>ボウルに牛ひき肉、卵、玉ねぎ、パン粉、ナツメ、塩、こしょうを入れて粘りが出るまで混ぜる。手にサラダ油をつけて肉だねを半量取り、手の平で叩きつけるように空気を抜きながら小判形にする。同様に計2つ作る。</p>
+            </li>
+            <li>
+              <p>フライパンの油をキッチンペーパーで拭き取り、サラダ油を入れて中火で熱し、肉だねを並べ入れて焼き、焼き色がついたら裏返し、ふたをして弱火で7〜8分ほど焼き、器に盛る。</p>
+            </li>
+            <li>
+              <p>フライパンの油をキッチンペーパーで拭き取り、ウスターソース、ケチャップ、有塩バター、こしょう少々を入れて中火でバターが溶けるまで混ぜながら加熱し、ハンバーグにかける。</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="media">
+        <h5 class="main__heading"><i class="fas fa-photo-video"></i>Media</h5>
+        <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/USx3nxa2ktk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="row g-0">
+      <div class="col-2 gallery-bg-footer" style="background: url(./assets/img/gallery-1.jpg)no-repeat center/cover;">
+      </div>
+      <div class="col-2 gallery-bg-footer" style="background: url(./assets/img/gallery-2.jpg)no-repeat center/cover;">
+      </div>
+      <div class="col-2 gallery-bg-footer" style="background: url(./assets/img/gallery-3.jpg)no-repeat center/cover;">
+      </div>
+      <div class="col-2 gallery-bg-footer" style="background: url(./assets/img/gallery-4.jpg)no-repeat center/cover;">
+      </div>
+      <div class="col-2 gallery-bg-footer" style="background: url(./assets/img/gallery-5.jpg)no-repeat center/cover;">
+      </div>
+      <div class="col-2 gallery-bg-footer" style="background: url(./assets/img/gallery-6.jpg)no-repeat center/cover;">
+      </div>
+    </div>
+    <div class="container-fluid footer__bottom section-padding">
+      <div class="container text-center">
+        <p class="footer__powered text-white">
+          Copyright ©2021 All rights reserved by <span>HelloWorldGroup</span>
+        </p>
+        <div class="footer__social">
+          <a href="#"> <i class="fab fa-facebook    "></i> </a>
+          <a href="#"> <i class="fab fa-twitch    "></i> </a>
+          <a href="#"> <i class="fab fa-youtube    "></i> </a>
+          <a href="#"> <i class="fab fa-instagram    "></i> </a>
+          <a href="#"> <i class="fab fa-discord    "></i> </a>
+          <a href="#"> <i class="fab fa-reddit    "></i> </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="btn btn-floating btn-lg back-top-btn" id="back-top" data-aos="fade-up"
+    data-aos-anchor=".welcome" data-aos-once="false">
+    <i class="fas fa-angle-double-up"></i>
+  </button>
+  <!-- Script -->
+  <script src="./assets/js/back-top.js"></script>
+  <script src="./assets/js/slow-scroll.js"></script>
+  <script src="./assets/js/sticky-nav.js"></script>
+  <script src="./assets/js/varying-modal.js"></script>
+  <script src="./assets/js/preload.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      delay: 100,
+      duration: 1200,
+      easing: 'ease-out',
+      once: true,
+    });
+  </script>
+</body>
+
+</html>
