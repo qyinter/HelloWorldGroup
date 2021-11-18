@@ -57,6 +57,9 @@
       let str_video = '<iframe src="'+data.media+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
       $('#video_wrapper').html(str_video)
     })
+    $('#icon').click(function(){
+    window.location.href='index.html'
+   })
   })
 </script>
 <body>
@@ -84,7 +87,7 @@
 <header>
   <nav class="navbar navbar-expand-md navigation-wrapper">
     <div class="container-md px-0 px-md-3 nav-custom">
-      <a class="navbar-brand p-0" href="#">
+      <a class="navbar-brand p-0" id="icon">
         MyFoodie
       </a>
       <button class="navbar-toggler me-3 me-md-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

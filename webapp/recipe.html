@@ -13,7 +13,16 @@
   <link rel="stylesheet" href="./assets/css/recipe.css">
   <link rel="stylesheet" href="./assets/css/responsive-recipe.css">
   <link rel="stylesheet" href="./assets/css/preload.css">
+  <script src="assets/js/jquery.js"></script>
+
 </head>
+<script>
+  $(function(){
+    $('#icon').click(function(){
+    window.location.href='index.html'
+   })
+  })
+</script>
 <body>
   <!-- Preloader -->
   <div id="preload">
@@ -39,7 +48,7 @@
   <header>
     <nav class="navbar navbar-expand-md navigation-wrapper">
       <div class="container-lg px-0 px-md-3 nav-custom">
-        <a class="navbar-brand p-0" href="#">
+        <a class="navbar-brand p-0" id="icon">
           MyFoodie
         </a>
         <button class="navbar-toggler me-3 me-md-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
