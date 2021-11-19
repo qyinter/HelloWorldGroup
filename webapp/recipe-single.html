@@ -23,9 +23,7 @@
   $(function () {
     let rid = getParameter("rid")
     $.get("http://helloworld.qyinter.cn/food/findByRid?rid="+rid,{},function (data) {
-      console.log(data)
       $('#description_text').html(data.food_details)
-      $('#food_name').html(data.food_name)
       $('#food_time').html(data.time +' min')
       $('#energy').html(data.energy+' kcal')
       if(data.cid ==1){
@@ -46,7 +44,11 @@
                 '</li>'
       }
       let str_beijing = '<div class="banner-bg" style="background: url('+data.big_imgs+') no-repeat center/cover;"></div>'
+      let beijing_text = '<div class="banner-text d-flex justify-content-center align-items-center"><h1 class="banner-title text-white text-center" id="food_name">富山ブラック</h1></div>'
+      str_beijing+=beijing_text
       $('#beijing').html(str_beijing)
+      $('#food_name').html(data.food_name)
+     
       $('#food_ul').html(strs)
       let food_methodArr = data.making_method.split('|')
       let strs_ol= ''
@@ -149,9 +151,6 @@
 <section class="top-banner">
   <div class="container-fluid px-0" id="beijing">
     
-    <div class="banner-text d-flex justify-content-center align-items-center">
-      <h1 class="banner-title text-white text-center" id="food_name">富山ブラック</h1>
-    </div>
   </div>
 </section>
 <!-- Main Section -->
