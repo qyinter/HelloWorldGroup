@@ -19,9 +19,93 @@
 <script>
   $(function(){
     $('#icon').click(function(){
-    window.location.href='index.html'
-   })
+      window.location.href='index.html'
+    })
+    //页面加载完成后加载数据
+    load(1,9)
+    $('#button-addon2').click(function(){
+            let name2 = $('#btn2_input').val()
+            $.get("http://helloworld.qyinter.cn/food/findByName?name="+name2,{},function (data) {
+            let str = ''
+            for (let i = 0; i < data.length; i++) {
+                str  += '<div class="col-12 col-md-4">'+
+                    '<div class="recipe-wrapper">'+
+                    '<div class="recipe-bg">'+
+                    '<a href="recipe-single.html?rid=' + data[i].rid + '" class="recipe-link">'+
+                    '<div class="recipe-bg-container" style="background: url('+data[i].small_imgs+');"></div>'+
+                    '</a>'+
+                    '</div>'+
+                    '<div class="recipe-label">'+
+                    '<span class="badge rounded-pill bg-warning text-white">5.0 <i class="fas fa-star"></i></span>'+
+                    '</div>'+
+                    '<div class="recipe-caption">'+
+                    '<h5 class="recipe-caption__heading">'+data[i].food_name+'</h5>'+
+                    '<p class="recipe-caption__sub"></p>'+
+                    '</div>'+
+                    '</div>'+
+                    '</div>'
+            }
+
+            $("#food").html(str)
+            $("#from_ul").html('')
+        })
+        })
   })
+  function load(currentPage,pageSize){
+      $.get("http://helloworld.qyinter.cn/food/pageQuery?currentPage="+currentPage+"&pageSize="+pageSize,{},function(data){
+      //1.分页工具条
+        let lis = '';
+        //计算上一页的页码
+        let fristNum = data.currentPage - 1;
+        if(fristNum<=0){
+          fristNum = 1;
+        }
+        let frist = '<li class="page-item"><a class="page-link" href="javascript:load('+fristNum+','+pageSize+')">Previous</a></li>';
+        lis+=frist
+       for(let i = 1;i<=data.totalPage;i++){
+          let li;
+          if(data.currentPage==i){
+            li = '<li class="page-item active"><a class="page-link" href="javascript:load('+i+','+pageSize+')">'+i+'</a></li>';
+          }else{
+            li = '<li class="page-item"><a class="page-link" href="javascript:load('+i+','+pageSize+')">'+i+'</a></li>';
+          }
+          
+          lis+=li;
+          
+        }
+        let lastNum = data.currentPage+1
+        if(lastNum>data.totalPage){
+          lastNum = data.totalPage
+        }
+        let last = '<li class="page-item"><a class="page-link" href="javascript:load('+lastNum+','+pageSize+')">Next</a></li>'
+        lis+=last
+        $("#from_ul").html(lis)
+       //2.列表数据
+        let foodli = '';
+        for(let i = 0;i<data.list.length;i++){
+          let food = data.list[i]
+          let li = '<div class="col-12 col-md-4">'+
+                        '<div class="recipe-wrapper">'+
+                            '<div class="recipe-bg">'+
+                                '<a href="recipe-single-jp1.html" class="recipe-link">'+
+                                    '<div class="recipe-bg-container" style="background: url('+data.list[i].small_imgs+');"></div>'+
+                               '</a>'+
+                            '</div>'+
+                            '<div class="recipe-label">'+
+                                '<span class="badge rounded-pill bg-warning text-white">5.0 <i class="fas fa-star"></i></span>'+
+                            '</div>'+
+                            '<div class="recipe-caption">'+
+                                '<h5 class="recipe-caption__heading">'+data.list[i].food_name+'</h5>'+
+                                '<p class="recipe-caption__sub">Editorial, Food & Drink</p>'+
+                            '</div>'+
+                       '</div>'+
+                   ' </div>'
+          foodli += li;
+        }
+        $('#food').html(foodli);
+
+   })
+  }
 </script>
 <body>
   <!-- Preloader -->
@@ -128,7 +212,7 @@
                 <div class="filter-wrapper">
                     <h5 class="filter__heading my-3">Search & Filters</h5>
                     <div class="input-group filter__search my-3">
-                        <input type="text" class="form-control" placeholder="I want to make..." aria-label="I want to make..." aria-describedby="button-addon2">
+                        <input type="text" id="btn2_input" class="form-control" placeholder="I want to make..." aria-label="I want to make..." aria-describedby="button-addon2">
                         <button class="main-btn" type="button" id="button-addon2"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </div>
                     <div class="filter__category">
@@ -150,161 +234,14 @@
               </div>
               <!-- Recipe list -->
               <div class="col-12 col-lg-9">
-                <div class="row g-5">
-                    <div class="col-12 col-md-4">
-                        <div class="recipe-wrapper">
-                            <div class="recipe-bg">
-                                <a href="recipe-single-jp1.html" class="recipe-link">
-                                    <div class="recipe-bg-container" style="background: url(./assets/img/food/food-jp1.JPG);"></div>
-                                </a>
-                            </div>
-                            <div class="recipe-label">
-                                <span class="badge rounded-pill bg-warning text-white">5.0 <i class="fas fa-star"></i></span>
-                            </div>
-                            <div class="recipe-caption">
-                                <h5 class="recipe-caption__heading">富山ブラック</h5>
-                                <p class="recipe-caption__sub">醤油を濃くしたスープラーメン</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="recipe-wrapper">
-                            <div class="recipe-bg">
-                                <a href="recipe-single-jp2.html" class="recipe-link">
-                                    <div class="recipe-bg-container" style="background: url(./assets/img/food/food-jp2.JPG);"></div>
-                                </a>
-                            </div>
-                            <div class="recipe-label">
-                                <span class="badge rounded-pill bg-warning text-white">5.0 <i class="fas fa-star"></i></span>
-                            </div>
-                            <div class="recipe-caption">
-                                <h5 class="recipe-caption__heading">スープカレー</h5>
-                                <p class="recipe-caption__sub">Editorial, Food & Drink</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="recipe-wrapper">
-                            <div class="recipe-bg">
-                                <a href="recipe-single-jp3.html" class="recipe-link">
-                                    <div class="recipe-bg-container" style="background: url(./assets/img/food/food-jp3.JPG);"></div>
-                                </a>
-                            </div>
-                            <div class="recipe-label">
-                                <span class="badge rounded-pill bg-warning text-white">5.0 <i class="fas fa-star"></i></span>
-                            </div>
-                            <div class="recipe-caption">
-                                <h5 class="recipe-caption__heading">北海道海鮮丼</h5>
-                                <p class="recipe-caption__sub">Editorial, Food & Drink</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="recipe-wrapper">
-                            <div class="recipe-bg">
-                                <a href="recipe-single-jp4.html" class="recipe-link">
-                                    <div class="recipe-bg-container" style="background: url(./assets/img/food/food-jp4.JPG);"></div>
-                                </a>
-                            </div>
-                            <div class="recipe-label">
-                                <span class="badge rounded-pill bg-warning text-white">5.0 <i class="fas fa-star"></i></span>
-                            </div>
-                            <div class="recipe-caption">
-                                <h5 class="recipe-caption__heading">ジンギスカン焼肉</h5>
-                                <p class="recipe-caption__sub">Editorial, Food & Drink</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="recipe-wrapper">
-                            <div class="recipe-bg">
-                                <a href="recipe-single-jp5.html" class="recipe-link">
-                                    <div class="recipe-bg-container" style="background: url(./assets/img/food/food-jp5.JPG);"></div>
-                                </a>
-                            </div>
-                            <div class="recipe-label">
-                                <span class="badge rounded-pill bg-warning text-white">5.0 <i class="fas fa-star"></i></span>
-                            </div>
-                            <div class="recipe-caption">
-                                <h5 class="recipe-caption__heading">山梨ほうとう</h5>
-                                <p class="recipe-caption__sub">Editorial, Food & Drink</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="recipe-wrapper">
-                            <div class="recipe-bg">
-                                <a href="recipe-single-jp6.html" class="recipe-link">
-                                    <div class="recipe-bg-container" style="background: url(./assets/img/food/food-jp66.JPG);"></div>
-                                </a>
-                            </div>
-                            <div class="recipe-label">
-                                <span class="badge rounded-pill bg-warning text-white">5.0 <i class="fas fa-star"></i></span>
-                            </div>
-                            <div class="recipe-caption">
-                                <h5 class="recipe-caption__heading">牛ハンバーグ</h5>
-                                <p class="recipe-caption__sub">Editorial, Food & Drink</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="recipe-wrapper">
-                            <div class="recipe-bg">
-                                <a href="recipe-single-jp7.html" class="recipe-link">
-                                    <div class="recipe-bg-container" style="background: url(./assets/img/food/food-jp7.JPG);"></div>
-                                </a>
-                            </div>
-                            <div class="recipe-label">
-                                <span class="badge rounded-pill bg-warning text-white">5.0 <i class="fas fa-star"></i></span>
-                            </div>
-                            <div class="recipe-caption">
-                                <h5 class="recipe-caption__heading">金沢カレー</h5>
-                                <p class="recipe-caption__sub">Editorial, Food & Drink</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="recipe-wrapper">
-                            <div class="recipe-bg">
-                                <a href="recipe-single-cn1.html" class="recipe-link">
-                                    <div class="recipe-bg-container" style="background: url(./assets/img/food/food-cn1.jpg);"></div>
-                                </a>
-                            </div>
-                            <div class="recipe-label">
-                                <span class="badge rounded-pill bg-warning text-white">5.0 <i class="fas fa-star"></i></span>
-                            </div>
-                            <div class="recipe-caption">
-                                <h5 class="recipe-caption__heading">麻婆豆腐</h5>
-                                <p class="recipe-caption__sub">Editorial, Food & Drink</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="recipe-wrapper">
-                            <div class="recipe-bg">
-                                <a href="recipe-single-cn2.html" class="recipe-link">
-                                    <div class="recipe-bg-container" style="background: url(./assets/img/food/food-cn2.jpg);"></div>
-                                </a>
-                            </div>
-                            <div class="recipe-label">
-                                <span class="badge rounded-pill bg-warning text-white">5.0 <i class="fas fa-star"></i></span>
-                            </div>
-                            <div class="recipe-caption">
-                                <h5 class="recipe-caption__heading">中華丼</h5>
-                                <p class="recipe-caption__sub">Editorial, Food & Drink</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row g-5" id="food">
+                    
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <nav aria-label="Page navigation example">
-                            <ul class="pagination pagination-lg justify-content-center mt-5">
-                              <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-                              <li class="page-item active"><a class="page-link" href="#recipe-section">1</a></li>
-                              <li class="page-item"><a class="page-link" href="recipe-2.html#recipe-section">2</a></li>
-                              <li class="page-item"><a class="page-link" href="recipe-3.html#recipe-section">3</a></li>
-                              <li class="page-item"><a class="page-link" href="recipe-2.html#recipe-section">Next</a></li>
+                            <ul class="pagination pagination-lg justify-content-center mt-5" id="from_ul">
+                              
                             </ul>
                           </nav>
                     </div>
