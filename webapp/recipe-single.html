@@ -88,61 +88,85 @@
 <!-- Navigation -->
 <header>
   <nav class="navbar navbar-expand-md navigation-wrapper">
-    <div class="container-md px-0 px-md-3 nav-custom">
-      <a class="navbar-brand p-0" id="icon">
-        MyFoodie
-      </a>
-      <button class="navbar-toggler me-3 me-md-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container-lg px-3">
+      <div class="nav-logo">
+        <a href="#" class="nav-logo-link">
+          <img src="./assets/img/logo.png" alt="" class="nav-logo-img">
+          <span class="nav-logo-name ms-2">MyFoodie</span>
+        </a>
+      </div>
+      <button class="navbar-toggler p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-stream navbar-toggler-icon text-white"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Recipes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Mini game</a>
-          </li>
-          <div class="row gx-0">
-            <div class="col-3 p-0">
-              <li class="nav-item">
-                <a class="nav-link nav-link--custom nav-link--youtube" href="#"><i class="nav-icon fab fa-youtube"
-                                                                                   aria-hidden="true"></i></a>
-              </li>
-            </div>
-            <div class="col-3 p-0">
-              <li class="nav-item">
-                <a class="nav-link nav-link--custom nav-link--twitter" href="#"><i class="nav-icon fab fa-twitter"
-                                                                                   aria-hidden="true"></i></a>
-              </li>
-            </div>
-            <div class="col-3 p-0">
-              <li class="nav-item">
-                <a class="nav-link nav-link--custom nav-link--facebook" href="#"><i class="nav-icon fab fa-facebook"
-                                                                                    aria-hidden="true"></i></a>
-              </li>
-            </div>
-            <div class="col-3 p-0">
-              <li class="nav-item">
-                <a class="nav-link nav-link--custom nav-link--instagram" href="#"><i class="nav-icon fab fa-instagram"
-                                                                                     aria-hidden="true"></i></a>
-              </li>
-            </div>
-          </div>
 
-
-
-        </ul>
+      <!-- Offcanvas -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <img src="./assets/img/logo.png" alt="" class="nav-logo-img">
+          <h5 id="offcanvasRightLabel">MyFoodie</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home<i
+                  class="next-icon d-md-none fas fa-angle-double-right"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="recipe.html">Recipes<i
+                  class="next-icon d-md-none fas fa-angle-double-right"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us<i class="next-icon d-md-none fas fa-angle-double-right"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact<i class="next-icon d-md-none fas fa-angle-double-right"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mini game<i class="next-icon d-md-none fas fa-angle-double-right"></i></a>
+            </li>
+            <div class="nav-social ms-md-2">
+              <li class="nav-item nav-item--no-border text-center d-md-none">
+                <a class="nav-link follow-link" href="#">Subscribe us</a>
+              </li>
+              <div class="row gx-0">
+                <div class="col-md-3 p-0">
+                  <li class="nav-item">
+                    <a class="nav-link nav-social-link nav-link--youtube" href="#">
+                      <span class="d-md-none">Youtube</span>
+                      <i class="nav-icon fab fa-youtube" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </div>
+                <div class="col-md-3 p-0">
+                  <li class="nav-item">
+                    <a class="nav-link nav-social-link nav-link--twitter" href="#">
+                      <span class="d-md-none">Twitter</span>
+                      <i class="nav-icon fab fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </div>
+                <div class="col-md-3 p-0">
+                  <li class="nav-item">
+                    <a class="nav-link nav-social-link nav-link--facebook" href="#">
+                      <span class="d-md-none">Facebook</span>
+                      <i class="nav-icon fab fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </div>
+                <div class="col-md-3 p-0">
+                  <li class="nav-item">
+                    <a class="nav-link nav-social-link nav-link--instagram" href="#">
+                      <span class="d-md-none">Instagram</span>
+                      <i class="nav-icon fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
