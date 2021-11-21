@@ -1,5 +1,6 @@
 package cn.qianyu.mapper;
 
+import cn.qianyu.domain.Admin;
 import cn.qianyu.domain.Food;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,5 +25,14 @@ public class FoodMapperTest {
     public void testSearch(){
         List<Food> foods = foodMapper.findByName("カレ");
         System.out.println(foods);
+    }
+    @Test
+    public void testLogin(){
+        Admin admin = new Admin();
+        admin.setUsername("qianyu");
+        admin.setPassword("123456");
+
+        Admin login = foodMapper.login(admin);
+        System.out.println(login);
     }
 }

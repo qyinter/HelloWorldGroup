@@ -1,12 +1,16 @@
 package cn.qianyu.service;
 
+import cn.qianyu.domain.Admin;
 import cn.qianyu.domain.Food;
 import cn.qianyu.domain.PageBean;
 import cn.qianyu.mapper.FoodMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+@Slf4j
 @Service
 public class FoodService {
     @Autowired
@@ -31,6 +35,7 @@ public class FoodService {
         pb.setPageSize(pageSize);
         //设置总的记录数
         int totalCount = foodMapper.findTotalCountAll();
+
         pb.setTotalCount(totalCount);
         //设置当前显示的数据集合
         int start = (currentPage - 1) * pageSize;
@@ -46,5 +51,25 @@ public class FoodService {
     public Food findByRid(String rid){
         Food food = foodMapper.findByRid(rid);
         return food;
+    }
+
+    public boolean login(Admin admin) {
+        Admin adm= foodMapper.login(admin);
+        if(adm!=null){
+            return true;
+        }
+        return false;
+    }
+
+    public void addFood(Food food){
+        foodMapper.addFood(food);
+    }
+
+    public void deleteFood(Integer rid) {
+        foodMapper.deleteFood(rid);
+    }
+
+    public void updateFood(Food food) {
+        foodMapper.updateFood(food);
     }
 }

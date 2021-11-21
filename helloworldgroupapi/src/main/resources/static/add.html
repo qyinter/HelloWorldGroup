@@ -1,0 +1,109 @@
+<!-- HTML5文档-->
+<!DOCTYPE html>
+<!-- 网页使用的语言 -->
+<html lang="zh-CN">
+<head>
+    <!-- 指定字符集 -->
+    <meta charset="utf-8">
+    <!-- 使用Edge最新的浏览器的渲染方式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- viewport视口：网页可以根据设置的宽度自动进行适配，在浏览器的内部虚拟一个容器，容器的宽度与设备的宽度相同。
+    width: 默认宽度与设备的宽度相同
+    initial-scale: 初始的缩放比，为1:1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>添加用户</title>
+
+    <!-- 1. 导入CSS的全局样式 -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- 2. jQuery导入，建议使用1.9以上的版本 -->
+    <script src="./js/jquery-2.1.0.min.js"></script>
+    <!-- 3. 导入bootstrap的js文件 -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $("#add_btn").click(function () {
+                let food_name = $("#food_name").val()
+                let food_details = $("#food_details").val()
+                let food_address = $("#food_address").val()
+                let small_imgs = $("#small_imgs").val()
+                let big_imgs = $("#big_imgs").val()
+                let making_method = $("#making_method").val()
+                let food_material = $("#food_material").val()
+                let cid = $("#cid").val()
+                let time = $("#time").val()
+                let energy = $("#energy").val()
+                let media = $("#media").val()
+
+                $.get("food/addFood",{food_name:food_name,food_details:food_details,food_address:food_address,small_imgs:small_imgs,big_imgs:big_imgs,making_method:making_method,food_material:food_material,cid:cid,time:time,energy:energy,media:media},function (data) {
+                    window.location.href = 'list.html';
+                })
+            })
+
+            $("#fanhui").click(function () {
+                window.location.href = 'list.html';
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="container">
+    <center><h3>料理の内容追加画面</h3></center>
+
+    <div class="form-group">
+        <label for="food_name">料理の名前：</label>
+        <input type="text" class="form-control" id="food_name" placeholder="料理の名前入れてください。">
+    </div>
+
+    <div class="form-group">
+        <label for="food_details">料理の詳し説明：</label>
+        <textarea class="form-control" id="food_details" cols="40" rows="5" placeholder="料理の詳し説明入れてください。"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="food_address">料理のところ：</label>
+        <input type="text" class="form-control" id="food_address" placeholder="料理のところ入れてください。">
+    </div>
+    <div class="form-group">
+        <label for="small_imgs">料理の小さい写真：</label>
+        <input type="text" class="form-control" id="small_imgs" placeholder="小さい写真入れてください。">
+    </div>
+    <div class="form-group">
+        <label for="big_imgs">料理の大さい写真：</label>
+        <input type="text" class="form-control" id="big_imgs" placeholder="大さい写真入れてください。">
+    </div>
+    <div class="form-group">
+        <label for="making_method">作る方法：</label>
+        <textarea class="form-control" id="making_method" cols="40" rows="5" placeholder="作る方法入れてください。"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="food_material">料理の材料：</label>
+        <textarea class="form-control" id="food_material" cols="40" rows="5" placeholder="料理の材料入れてください。"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="cid">料理の国番号入れて：</label>
+        <input type="text" class="form-control" id="cid" placeholder="国番号入れてください。">
+    </div>
+    <div class="form-group">
+        <label for="time">調理の時間：</label>
+        <input type="text" class="form-control" id="time" placeholder="調理の時間入れてください。">
+    </div>
+
+    <div class="form-group">
+        <label for="energy">カロリー：</label>
+        <input type="text" class="form-control" id="energy" placeholder="カロリー入れてください。">
+    </div>
+
+    <div class="form-group">
+        <label for="media">作りvideo　：</label>
+        <input type="text" class="form-control" id="media" placeholder="作りvideo入れてください。">
+    </div>
+
+    <div class="form-group" style="text-align: center">
+        <button class="btn btn-primary" id="add_btn">出す</button>
+        <input class="btn btn-default" type="button" id="fanhui" value="戻す" />
+    </div>
+
+</div>
+</body>
+</html>
