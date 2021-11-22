@@ -6,7 +6,7 @@ import javax.persistence.Table;
 import java.util.List;
 
 /**
- * 分页对象
+ * page对象
  * @param <T>
  */
 @Data

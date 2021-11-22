@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<!-- 网页使用的语言 -->
 <html lang="zh-CN">
     <head>
     	<base href="<%=basePath%>"/>
-        <!-- 指定字符集 -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>修改用户</title>
-
+        <title>料理の内容変更</title>
         <link href="./css/bootstrap.min.css" rel="stylesheet">
         <script src="./js/jquery-2.1.0.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
@@ -45,7 +42,7 @@
                             let energy = $("#energy").val()
                             let media = $("#media").val()
                             let rid = $("#hidden").val()
-                            $.get("food/updateFood",{food_name:food_name,food_details:food_details,food_address:food_address,small_imgs:small_imgs,big_imgs:big_imgs,making_method:making_method,food_material:food_material,cid:cid,time:time,energy:energy,media:media,rid:rid},function () {
+                            $.post("food/updateFood",{food_name:food_name,food_details:food_details,food_address:food_address,small_imgs:small_imgs,big_imgs:big_imgs,making_method:making_method,food_material:food_material,cid:cid,time:time,energy:energy,media:media,rid:rid},function () {
                                 window.location.href = 'list.html';
                             })
                         }

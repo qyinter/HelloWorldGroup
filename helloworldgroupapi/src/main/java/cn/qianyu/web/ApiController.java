@@ -68,12 +68,12 @@ public class ApiController {
         Message message = new Message();
         if (flag){
             message.setCode(200);
-            message.setMsg("登陆成功！");
+            message.setMsg("ログイン成功！");
             request.getSession().setAttribute("admin",admin);
             return message;
         }
         message.setCode(100);
-        message.setMsg("登录失败！");
+        message.setMsg("ログインエラー！");
         return message;
     }
 
@@ -83,7 +83,7 @@ public class ApiController {
         Message message = new Message();
         foodService.addFood(food);
         message.setCode(200);
-        message.setMsg("登陆成功！");
+        message.setMsg("ログイン成功！");
         return message;
     }
 

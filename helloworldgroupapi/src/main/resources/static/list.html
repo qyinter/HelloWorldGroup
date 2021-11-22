@@ -1,27 +1,19 @@
 <!DOCTYPE html>
-<!-- 网页使用的语言 -->
 <html lang="zh-CN">
 <head>
-    <!-- 指定字符集 -->
     <meta charset="utf-8">
-    <!-- 使用Edge最新的浏览器的渲染方式 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- viewport视口：网页可以根据设置的宽度自动进行适配，在浏览器的内部虚拟一个容器，容器的宽度与设备的宽度相同。
-    width: 默认宽度与设备的宽度相同
-    initial-scale: 初始的缩放比，为1:1 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>用户信息管理系统</title>
-
-    <!-- 1. 导入CSS的全局样式 -->
+    <title>料理管理system</title>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <!-- 2. jQuery导入，建议使用1.9以上的版本 -->
     <script src="./js/jquery-2.1.0.min.js"></script>
-    <!-- 3. 导入bootstrap的js文件 -->
     <script src="./js/bootstrap.min.js"></script>
     <style type="text/css">
         td, th {
             text-align: center;
+        }
+        .neirong{
+            margin: auto 2.5%;
         }
     </style>
     <script>
@@ -38,22 +30,23 @@
             $.get("food/findAll",{},function (data) {
                 let tr_first = '<tr class="success">'+
                             '<th>番号</th>'+
-                            '<th>料理の名前</th>'+
-                            '<th>料理の説明</th>'+
-                            '<th>料理のところ</th>'+
+                            '<th>名前</th>'+
+                            '<th>説明</th>'+
+                            '<th>ところ</th>'+
                             '<th>小さい写真</th>'+
                             '<th>大さい写真</th>'+
                             '<th>作る方法</th>'+
-                            '<th>料理の材料</th>'+
+                            '<th>材料</th>'+
                             '<th>国番号</th>'+
                             '<th>調理の時間</th>'+
                             '<th>カロリー</th>'+
                             '<th>作りvideo</th>'+
+                            '<th></th><th></th>'+
                             '</tr>'
                 for (let i = 0; i < data.length; i++) {
                     tr_first += '<tr>'+
                             '<td>'+(i+1)+'</td>'+
-                            '<td style="width: 300px">'+data[i].food_name+'</td>'+
+                            '<td><div style="width: 150px">'+data[i].food_name+'</div></td>'+
                             '<td><div style="height:20px;overflow: hidden">'+data[i].food_details+'</div></td>'+
                             '<td><div style="height:20px;overflow: hidden">'+data[i].food_address+'</div></td>'+
                             '<td>'+data[i].small_imgs+'</td>'+
@@ -64,12 +57,12 @@
                             '<td>'+data[i].time+'</td>'+
                             '<td>'+data[i].energy+'</td>'+
                             '<td>'+data[i].media+'</td>'+
-                            '<td><a class="btn btn-default btn-sm" href="javascript:findFoodByRid('+data[i].rid+');">修改</a>' +
-                            '<a class="btn btn-default btn-sm" href="javascript:deleteFood('+data[i].rid+');">删除</a></td>'+
+                            '<td><a class="btn btn-default btn-sm" href="javascript:findFoodByRid('+data[i].rid+');">REVISE</a></td>' +
+                            '<td><a class="btn btn-default btn-sm" href="javascript:deleteFood('+data[i].rid+');">DELETE</a></td>'+
                             '</tr>'
 
                 }
-                let tr_last = '<tr><td colspan="12" align="center"><a class="btn btn-primary" href="add.html">添加联系人</a></td></tr>'
+                let tr_last = '<tr><td colspan="14" align="center"><a class="btn btn-primary" href="add.html">料理追加</a></td></tr>'
                 tr_first += tr_last
                 $("#table_all").html(tr_first)
             })
@@ -78,10 +71,9 @@
     </script>
 </head>
 <body>
-<div class="container">
+<div class="neirong">
     <h3 style="text-align: center">料理の内容</h3>
     <table border="1" class="table table-bordered table-hover" id="table_all">
-
     </table>
 </div>
 </body>
