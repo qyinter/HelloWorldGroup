@@ -16,8 +16,17 @@
     <link rel="stylesheet" href="./assets/css/contact.css">
     <link rel="stylesheet" href="./assets/css/responsive-contact.css">
     <link rel="stylesheet" href="./assets/css/preload.css">
+    <script src="./assets/js/jquery.js"></script>
 </head>
-
+<script >
+    $(function(){
+        $("#btn_contact").click(function(){
+            $.post("http://localhost:8080/addSteer",{},function(){
+                
+            })
+        })
+    })
+</script>
 <body>
     <!-- Preloader -->
     <div id="preload">
@@ -162,19 +171,19 @@
                             <form class="needs-validation" novalidate>
                                 <div class="row">
                                     <div class="col-md-12 form-group">
-                                        <input type="text" class="form-control" placeholder="お名前" required>
+                                        <input type="text" id="name" class="form-control" placeholder="お名前" required>
                                         <div class="invalid-feedback">入力してください</div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 form-group">
-                                        <input type="text" class="form-control" placeholder="メールアドレス" required>
+                                        <input type="text" id="email" class="form-control" placeholder="メールアドレス" required>
                                         <div class="invalid-feedback">入力してください</div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 form-group">
-                                        <input type="text" class="form-control" placeholder="タイトル" required>
+                                        <input type="text" id="title" class="form-control" placeholder="タイトル" required>
                                         <div class="invalid-feedback">入力してください</div>
                                     </div>
                                 </div>
@@ -187,7 +196,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <button type="submit" class="white-btn rounded-3">確認</button>
+                                        <button id="btn_contact" class="white-btn rounded-3">確認</button>
                                     </div>
                                 </div>
                             </form>
