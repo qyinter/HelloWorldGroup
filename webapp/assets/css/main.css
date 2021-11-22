@@ -412,6 +412,7 @@ h2 {
 
 .video-section .g-caption__sub {
     margin: 0;
+    text-transform: capitalize;
 }
 .card {
     background: none;
