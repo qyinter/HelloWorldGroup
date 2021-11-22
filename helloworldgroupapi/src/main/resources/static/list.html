@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>料理管理system</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <script src="./js/jquery-2.1.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <style type="text/css">
+        td, th {
+            text-align: center;
+        }
+        .neirong{
+            margin: auto 2.5%;
+        }
+    </style>
+    <script>
+        function deleteFood(rid) {
+            if (confirm("本当に削除しますか？")){
+                $.get("food/deleteFood",{rid:rid})
+                location.href = "list.html"
+            }
+        }
+        function findFoodByRid(rid){
+            location.href = "update.html?rid="+rid
+        }
+        $(function () {
+            $.get("food/findAll",{},function (data) {
+                let tr_first = '<tr class="success">'+
+                            '<th>番号</th>'+
+                            '<th>名前</th>'+
+                            '<th>説明</th>'+
+                            '<th>ところ</th>'+
+                            '<th>小さい写真</th>'+
+                            '<th>大さい写真</th>'+
+                            '<th>作る方法</th>'+
+                            '<th>材料</th>'+
+                            '<th>国番号</th>'+
+                            '<th>調理の時間</th>'+
+                            '<th>カロリー</th>'+
+                            '<th>作りvideo</th>'+
+                            '<th></th><th></th>'+
+                            '</tr>'
+                for (let i = 0; i < data.length; i++) {
+                    tr_first += '<tr>'+
+                            '<td>'+(i+1)+'</td>'+
+                            '<td><div style="width: 150px">'+data[i].food_name+'</div></td>'+
+                            '<td><div style="height:20px;overflow: hidden">'+data[i].food_details+'</div></td>'+
+                            '<td><div style="height:20px;overflow: hidden">'+data[i].food_address+'</div></td>'+
+                            '<td>'+data[i].small_imgs+'</td>'+
+                            '<td>'+data[i].big_imgs+'</td>'+
+                            '<td><div style="height:20px;overflow: hidden">'+data[i].making_method+'</div></td>'+
+                            '<td><div style="height:20px;overflow: hidden">'+data[i].food_material+'</div></td>'+
+                            '<td>'+data[i].cid+'</td>'+
+                            '<td>'+data[i].time+'</td>'+
+                            '<td>'+data[i].energy+'</td>'+
+                            '<td>'+data[i].media+'</td>'+
+                            '<td><a class="btn btn-default btn-sm" href="javascript:findFoodByRid('+data[i].rid+');">REVISE</a></td>' +
+                            '<td><a class="btn btn-default btn-sm" href="javascript:deleteFood('+data[i].rid+');">DELETE</a></td>'+
+                            '</tr>'
+
+                }
+                let tr_last = '<tr><td colspan="14" align="center"><a class="btn btn-primary" href="add.html">料理追加</a></td></tr>'
+                tr_first += tr_last
+                $("#table_all").html(tr_first)
+            })
+        })
+
+    </script>
+</head>
+<body>
+<div class="neirong">
+    <h3 style="text-align: center">料理の内容</h3>
+    <table border="1" class="table table-bordered table-hover" id="table_all">
+    </table>
+</div>
+</body>
+</html>

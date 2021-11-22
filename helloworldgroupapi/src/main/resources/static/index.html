@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>管理者ログイン</title>
+	<link href="./css/bootstrap.css" rel="stylesheet">
+    <script src="./js/jquery-2.1.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+	<script>
+		$(function () {
+			$("#btn").click(function () {
+				let username = $("#username").val()
+				let password = $("#password").val()
+				$.get("food/login",{username:username,password:password},function (data) {
+					if (data.code===200){
+						window.location.href = 'list.html';
+					}else {
+						$("#message").css("display","block")
+					}
+				})
+			})
+		})
+	</script>
+  </head>
+  <body>
+  	<div class="container" style="width: 400px;">
+  		<h3 style="text-align: center;">管理者ログイン</h3>
+
+	  <div class="form-group">
+		<label for="username">USERNAME：</label>
+		<input type="text" name="username" class="form-control" id="username" placeholder="ユーザー名入れてください。"/>
+	  </div>
+
+	  <div class="form-group">
+		<label for="password">PASSWORD：</label>
+		<input type="password" name="password" class="form-control" id="password" placeholder="暗証番号入れてください。"/>
+	  </div>
+
+	  <hr/>
+	  <div class="form-group" style="text-align: center;">
+		<button class="btn btn btn-primary" id="btn">ログイン</button>
+	  </div>
+
+		
+		<!-- 出错显示的信息框 -->
+	  	<div class="alert alert-warning alert-dismissible" role="alert" style="display: none" id="message">
+		  <button type="button" class="close" data-dismiss="alert" >
+		  	<span>&times;</span>
+		  </button>
+		   <strong>ログイン：エラー</strong>
+		</div>
+  	</div>
+  </body>
+</html>
