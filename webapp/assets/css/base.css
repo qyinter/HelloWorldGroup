@@ -111,7 +111,12 @@ p {
 .author-attr:hover {
     color: #000 !important;
 }
-
+.icon-author {
+    color: #fff;
+}
+.icon-author a {
+    color: var(--text-color);
+}
 .box-shadow-1 {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -402,7 +407,9 @@ p {
 .footer__bottom {
     background-color: #111;
 }
-
+.footer__social {
+    margin-bottom: 16px;
+}
 .footer__powered,
 .footer__social a {
     text-decoration: none;
