@@ -1,0 +1,3 @@
+function ClickMiniGame(){
+    alert('ClickToPlay');
+}
