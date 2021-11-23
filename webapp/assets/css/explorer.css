@@ -324,10 +324,15 @@ p {
 }
 
 .explorer-img-wrap {
+    position: relative;
     width: 100%;
+    padding-top: 55.5556%;
 }
 
 .explorer-img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -344,15 +349,15 @@ p {
 
 @media (min-width: 576px) {
     .modal-dialog {
-        margin: 6.5rem auto !important;
+        margin: 5rem auto !important;
     }
 
     .modal-dialog-centered {
-        min-height: calc(100% - 13rem) !important;
+        min-height: calc(100% - 10rem) !important;
     }
 
     .modal-dialog-scrollable {
-        height: calc(100% - 13rem) !important;
+        height: calc(100% - 10rem) !important;
     }
 }
 

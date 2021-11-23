@@ -14,7 +14,8 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <!-- Own Css -->
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/explorer.css">
@@ -155,7 +156,7 @@
                     <h1 class="country__name">Japan</h1>
                     <p class="country__desc">新鮮な魚介類の持ち味を生かした料理が多く (刺身，塩焼など) 、材料や調理法に季節感を重んじている。
                         食器の色、材質、形がさまざまで、盛りつけが繊細な美しさをもつのも特徴である。</p>
-                    <button class="country__detail" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <button class="country__detail" data-bs-toggle="modal" data-bs-target="#jpModal">
                         <p>View details</p>
                     </button>
                 </div>
@@ -167,7 +168,7 @@
                     <h1 class="country__name">China</h1>
                     <p class="country__desc">
                         広い国土を持つ中国では、各地方の気候・地理・歴史・食材・食習慣の違いにより、独自に形成された調理法・味付けの料理がある。世界的に広く普及し、また現地化も進んでいる。</p>
-                    <button class="country__detail">
+                    <button class="country__detail" data-bs-toggle="modal" data-bs-target="#cnModal">
                         <p>View details</p>
                     </button>
                 </div>
@@ -179,7 +180,7 @@
                     <h1 class="country__name">Vietnam</h1>
                     <p class="country__desc">
                         基本的に米食文化であり、麺類や春巻の皮なども小麦ではなく米から作ることなどを挙げられる。調理方法も炒める、蒸す、煮るなど手法が多いが、魚は、直火で焼く場合があるのが中華料理とは異なる。</p>
-                    <button class="country__detail">
+                    <button class="country__detail" data-bs-toggle="modal" data-bs-target="#vnModal">
                         <p>View details</p>
                     </button>
                 </div>
@@ -208,12 +209,12 @@
         <div class="swiper-scrollbar"></div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <div class="modal fade zoom-in" id="jpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <p class="explorer__modal-title">Mondstadt</p>
+                    <p class="explorer__modal-title">Japan</p>
                     <button class="explorer__modal-close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body custom-scrollbar-css py-0" id="custom-dark-thin">
@@ -221,46 +222,133 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="explorer-item">
-                                    <h1>Cider Lake</h1>
-                                    <p>A natural freshwater lake.
-                                        The lake's wide, crystalline appearance has remained unchanged for eons — so
-                                        clear you can see the bottom, and cool and refreshing to drink. It is none other
-                                        than these headwaters that brought Mondstadt's ciders and wines to fame and made
-                                        the lake the symbol of Mondstadt that it is today.</p>
-                                    <div class="explorer-img-wrap">
-                                        <img src="https://uploadstatic.mihoyo.com/contentweb/20200113/2020011311461397057.jpg"
-                                            alt="" class="explorer-img">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="explorer-item">
-                                    <h1>Falcon Coast</h1>
-                                    <p>Stretching eastward from Windrise to the sea, Falcon coast — together with Cape
-                                        Oath — shelters the sea from three sides, creating a bay that sits east of
-                                        Mondstadt.
-                                        Given the long coastline and shallow waters, citizens of Mondstadt often come
-                                        here to enjoy a nice stroll. On occasion, you can see falcons soaring high above
-                                        the blue waves that brush upon the white sand.</p>
-                                    <div class="explorer-img-wrap">
-                                        <img src="https://uploadstatic.mihoyo.com/contentweb/20200113/2020011311462187517.jpg"
-                                            alt="" class="explorer-img">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="explorer-item">
-                                    <h1>Dawn Winery</h1>
-                                    <p>Nestled in the land southwest of Mondstadt sits the winery that has passed down
-                                        the legacy of Mondstadt's traditional wines and ciders for generations.
-                                        The grapes grown here are used to produce a range of wines that are popular
-                                        right across Teyvat.
-                                        Every year's products are split, with a portion being sold locally within
-                                        Mondstadt, the rest is sold off via the trade route that sits south of the city.
+                                    <h1>Tokyo</h1>
+                                    <p>日本の首都であり、世界で最も人口の多い大都市である東京は、伝統と革新を備え、食事、買い物、探索を楽しむ機会が無限にあります。
+                                        東京は、日本最大の島である本州の関東地方の東京湾にあります。最寄りの空港は、正式には東京国際空港と呼ばれている羽田空港です。トレンドのショッピングエリアである原宿と渋谷から高級店が立ち並ぶ銀座に至るまで、ファッションとショッピングの街として知られています。
                                     </p>
                                     <div class="explorer-img-wrap">
-                                        <img src="https://uploadstatic.mihoyo.com/contentweb/20200319/2020031910130187113.png"
-                                            alt="" class="explorer-img">
+                                        <img src="./assets/img/explorer-tokyo.jpg" alt="" class="explorer-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="explorer-item">
+                                    <h1>Osaka</h1>
+                                    <p>大阪は、食べ物、ショッピング、ナイトライフが有名で、歴史、文化、レトロな魅力も豊富な、楽しく、フレンドリーな街です。
+                                        大阪は関西地方を探索するのに理想的なハブです。東京から新幹線で2時間強でアクセスでき、京都、奈良、広島に行くのに便利です。
+                                        ユニバーサルスタジオジャパン（USJ）のスリル満点の乗り物から、道頓堀周辺のネオン街やナイトライフなどの色とりどりの魅力、大阪城とその美しい公園や日本で最も古い寺院の1つである四天王寺といった歴史的魅力まで、たくさんの魅力があります。散策中にたこ焼き、お好み焼き、串カツなどの大阪の有名な屋台の食べ物で腹ごしらえしましょう。
+                                    </p>
+                                    <div class="explorer-img-wrap">
+                                        <img src="./assets/img/explorer-osaka.jpg" alt="" class="explorer-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="explorer-item">
+                                    <h1>Hokkaido</h1>
+                                    <p>北海道は、美しい自然、世界レベルのパウダースノー、おいしい海鮮物、魅力的な先住民の文化が有名です。東京から飛行機ですぐの北海道は、オールシーズン楽しめます。
+                                        北海道は、パウダースノーとニセコ、ルスツ、富良野などの人気リゾートがあるため、冬のスキーやスノーボードに人気の場所となっています。北海道の主要都市である札幌は、札幌ビール、札幌ラーメン、毎年恒例の札幌雪祭りが有名です。函館は、魅力的な歴史エリアと素晴らしい夜景が楽しめる伝統的な港です。
+                                    </p>
+                                    <div class="explorer-img-wrap">
+                                        <img src="./assets/img/explorer-hokkaido.jpg" alt="" class="explorer-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2 -->
+    <div class="modal fade zoom-in" id="cnModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="explorer__modal-title">Japan</p>
+                    <button class="explorer__modal-close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body custom-scrollbar-css py-0" id="custom-dark-thin">
+                    <div class="container-fluid p-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="explorer-item">
+                                    <h1>Beijing</h1>
+                                    <p>飛躍的発展をとげ、近代都市の風貌を見せる中国の首都・北京。高層ビルに壮麗な宮殿や広大な庭園が調和し、万里の長城や歴代皇帝の陵墓など、郊外に残る数多くの遺産が、絢爛たる歴史を物語ります。
+                                        古くから北京の海への玄関口として栄えた天津、河北省の省都・石家荘、雲崗石窟で知られる大同、清朝の夏の離宮があった承徳など、北京周辺には足を延ばしてみたい魅力的な町々が点在しています。
+                                    </p>
+                                    <div class="explorer-img-wrap">
+                                        <img src="./assets/img/explorer-beijing.jpg" alt="" class="explorer-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="explorer-item">
+                                    <h1>Sichuan</h1>
+                                    <p>麻婆豆腐などの四川料理で知られる四川省。その省都・成都は三国時代には蜀漢の都となった古都。劉備と孔明を祀る武侯祠で『三国志』に思いを馳せたり、パンダとのふれあいも四川省ならでは。
+                                        四川省には神秘の湖沼群が散らばる九寨溝、石灰華の池が棚田状に折り重なる黄龍、世界最大級の楽山大仏など世界遺産が点在。成都を拠点に大自然の造形美を愛でるハイキングや遺跡探訪が楽しめます。
+                                    </p>
+                                    <div class="explorer-img-wrap">
+                                        <img src="./assets/img/explorer-sichuan.jpg" alt="" class="explorer-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="explorer-item">
+                                    <h1>Shanghai</h1>
+                                    <p>まずは租界時代の歴史建築が並ぶ外灘から南京東路へ。上海きっての繁華街でショッピング。流行に敏感な方には、旧フランス租界の面影漂う町並みに高感度なショップが集まる新天地がおすすめ。オールド上海を楽しみたいなら、中国らしさを色濃く残す庶民的な雰囲気の豫園商城へ。
+                                    </p>
+                                    <div class="explorer-img-wrap">
+                                        <img src="./assets/img/explorer-shanghai.jpg" alt="" class="explorer-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 3 -->
+    <div class="modal fade zoom-in" id="vnModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="explorer__modal-title">Japan</p>
+                    <button class="explorer__modal-close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body custom-scrollbar-css py-0" id="custom-dark-thin">
+                    <div class="container-fluid p-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="explorer-item">
+                                    <h1>Ho Chi Minh City</h1>
+                                    <p>通りを埋めるバイクの群れと高層ビルに象徴されるホーチミン。サイゴン大教会からサイゴン川へ向かう随一の繁華街ドンコイ通りには、雑貨店やブティックなどが点在。ドンユー通りを左に入ると、おしゃれなカフェやレストランがずらり。ショッピング＆グルメを満喫できます。
+                                    </p>
+                                    <div class="explorer-img-wrap">
+                                        <img src="./assets/img/explorer-saigon.jpg" alt="" class="explorer-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="explorer-item">
+                                    <h1>Hoi An Ancient Town</h1>
+                                    <p>約450軒の木造の古い家屋が建ち並び、18世紀以来の佇まいが残る旧市街。車の乗り入れが禁止され、時の流れが止まったかのよう。旧暦の毎月14日、満月の夜にはホイアンの町から電気が消え、色とりどりのランタンがともります。ほのかな明かりに照らされる古い佇まいや川面に揺れる明かりが幻想的。露店も出て賑わいます。
+                                    </p>
+                                    <div class="explorer-img-wrap">
+                                        <img src="./assets/img/explorer-hoian.jpg" alt="" class="explorer-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="explorer-item">
+                                    <h1>Ha noi</h1>
+                                    <p>点在する湖や公園の緑が美しい政治と文化の中心地・ハノイ。フランス統治時代の欧風の建物や教会が顔をのぞかせる目抜き通りは、街路樹に縁取られ、エネルギッシュなホーチミンに比べ落ち着いた雰囲気。また、天秤棒を担いだ物売りが行き交うなど、昔ながらの風情を漂わせています。
+                                    </p>
+                                    <div class="explorer-img-wrap">
+                                        <img src="./assets/img/explorer-hanoi.jpg" alt="" class="explorer-img">
                                     </div>
                                 </div>
                             </div>

@@ -233,7 +233,7 @@ p {
     transition: .3s ease-out;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2); 
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 }
 
 .nav-logo {
@@ -269,7 +269,7 @@ p {
 
 .nav-link.active,
 .nav-link:focus {
-    color: var(--primary-color)!important;
+    color: var(--primary-color) !important;
 }
 
 .nav-social .nav-icon {
@@ -467,4 +467,20 @@ input:focus {
     100% {
         opacity: 0;
     }
+}
+
+/* Modal Animation */
+.modal {
+    transition: transform 0.2s;
+}
+.zoom-in {
+    transform: scale(0) !important;
+    opacity: 0;
+    display: block !important;
+}
+
+.zoom-in.show {
+    opacity: 1;
+    transform: scale(1) !important;
+    transform: none;
 }
