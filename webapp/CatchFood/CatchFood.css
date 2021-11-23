@@ -1,0 +1,41 @@
+body{
+    text-align: center;
+    margin: 0px;
+    background-color: black;
+    color: white;
+}
+.warp{
+    text-align: center;
+}
+.GamePoint{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 50px;
+    font-style: oblique;
+    left: 1000px;
+    text-shadow:  5px 5px #000;
+    color: white;
+    font-family: 'Henny Penny', cursive;
+}
+.StartImg{
+    width: 400px;
+    height: 400px;
+    padding: 0px;
+    margin: 0px;
+    left: 550px;
+    top: 150px;
+    display: block;
+    position: absolute;
+    background-image: url('img/StartGame1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#Container{
+    background-color: white;
+    overflow: visible;
+}
