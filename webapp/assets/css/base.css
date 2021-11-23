@@ -100,6 +100,51 @@ p {
     line-height: 1.75rem;
 }
 
+.author-attr {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    opacity: 0.4;
+    color: #000;
+}
+
+.author-attr:hover {
+    color: #000 !important;
+}
+
+.box-shadow-1 {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.center-diamond {
+    border: 0;
+    height: 1px;
+    width: 60%;
+    position: relative;
+    margin: 30px auto;
+    background-color: var(--primary-color);
+    overflow: visible !important;
+    opacity: 1;
+}
+
+.center-diamond::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    display: inline-block;
+    border: 2px solid var(--primary-color);
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    margin: 0 0 0 -3px;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Opera, Chrome, and Safari */
+}
+
 .section-padding {
     padding: 100px 0 !important;
 }
@@ -144,8 +189,8 @@ p {
 
 .white-btn:hover {
     background-color: transparent;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--white-color) !important;
+    border-color: var(--white-color) !important;
 }
 
 .more-btn {
@@ -473,6 +518,7 @@ input:focus {
 .modal {
     transition: transform 0.2s;
 }
+
 .zoom-in {
     transform: scale(0) !important;
     opacity: 0;

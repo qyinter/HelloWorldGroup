@@ -186,6 +186,19 @@
             "h6 h6"
     }
 
+    .popular-section .gallery-item::after {
+        background-color: rgba(0, 0, 0, 0.3);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .popular-section .g-caption {
+        top: 50%;
+        transform: translateY(-50%);
+        visibility: visible;
+        opacity: 1;
+    }
+
     .g-caption__heading {
         font-size: 2.25rem;
     }
@@ -258,6 +271,10 @@
             "h6 h6"
     }
 
+    .g-caption {
+        padding: 0 .5rem;
+    }
+
     .g-caption__heading {
         font-size: 1.5rem;
     }
@@ -266,13 +283,21 @@
         font-size: .6rem;
     }
 
+    .popular-section .main-btn {
+        padding: .5rem .5rem;
+    }
+
     .white-btn {
         padding: .35rem .5rem;
     }
 
     /* Video Section */
     .gallery-grid--video {
-        grid-template-rows: 250px 150px 150px 200px;
+        grid-template-rows: 250px 100px 90px 200px;
+    }
+
+    .playback-btn {
+        opacity: 1;
     }
 
     .playback-img {

@@ -35,6 +35,14 @@
 /* Recipe section */
 .recipe-wrapper {
     position: relative;
+    box-shadow:
+        0 1px 1px hsl(0deg 0% 0% / 0.075),
+        0 2px 2px hsl(0deg 0% 0% / 0.075),
+        0 4px 4px hsl(0deg 0% 0% / 0.075),
+        0 8px 8px hsl(0deg 0% 0% / 0.075),
+        0 16px 16px hsl(0deg 0% 0% / 0.075);
+    overflow: hidden;
+    border-radius: 2px;
 }
 
 .recipe-bg-container {
@@ -86,6 +94,7 @@
     color: #fff;
     font-size: .875rem;
     margin: 0;
+    text-transform: uppercase;
 }
 
 /* Pagination Nav */
@@ -116,6 +125,7 @@
 .filter__heading {
     font-size: 1.75rem;
 }
+
 .filter__search {
     border-radius: 1.875rem !important;
     overflow: hidden;
@@ -144,11 +154,13 @@
 .main-btn:hover {
     border-left: 1px solid rgba(0, 0, 0, 0.3);
 }
+
 .filter__category .form-select {
     cursor: pointer;
     border-radius: 1.875rem !important;
-    outline:none;
+    outline: none;
 }
+
 .filter__category .form-select:focus {
     border-color: rgba(0, 0, 0, 0.2);
     box-shadow: none;
@@ -156,7 +168,7 @@
 
 /* Search page */
 #search-not-found {
-    color: var(--white-color)!important;
+    color: var(--white-color) !important;
     font-size: 2.25rem;
     margin: 16px 0;
     line-height: 1.4;

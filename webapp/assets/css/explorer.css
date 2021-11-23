@@ -68,7 +68,7 @@ li {
 }
 
 .vn-bg {
-    background: url(../img/explorer-bg-vn.jpg) no-repeat center/cover;
+    background: url(../img/explorer-hanoi.jpg) no-repeat center/cover;
 }
 
 .footer__bottom {
@@ -202,9 +202,6 @@ p {
         transform: scale(1.4);
     }
 }
-
-.country__detail::before,
-.country__detail::after {}
 
 .country__detail p {
     color: #fff;

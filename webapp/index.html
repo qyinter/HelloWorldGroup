@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foodie</title>
+  <title>Home</title>
   <!-- Library -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -21,6 +21,7 @@
   <script src="assets/js/jquery.js"></script>
   <script src="./assets/js/index.js"></script>
 </head>
+
 <body>
   <!-- Preloader -->
   <div id="preload">
@@ -47,7 +48,7 @@
     <nav class="navbar navbar-expand-md navigation-wrapper">
       <div class="container-lg px-3">
         <div class="nav-logo">
-          <a href="#" class="nav-logo-link">
+          <a href="index.html" class="nav-logo-link">
             <img src="./assets/img/logo.png" alt="" class="nav-logo-img">
             <span class="nav-logo-name ms-2">MyFoodie</span>
           </a>
@@ -150,12 +151,15 @@
         </div>
       </div>
     </div>
+    <a class="author-attr" href='https://www.freepik.com/photos/food'>Food photo created by denamorado -
+      www.freepik.com</a>
   </section>
   <!-- Card section -->
   <section class="welcome section-padding">
     <div class="container px-0" data-aos="fade-up">
-      <h5 class="section__heading">このサイトは...</h5>
+      <h5 class="section__heading ">このサイトは...</h5>
       <p class="section__sub">This website...</p>
+      <hr class="center-diamond">
       <div class="row row-cols-1 row-cols-lg-3 text-center g-0">
         <div class="col">
           <div class="card" data-aos="slide-left">
@@ -191,14 +195,17 @@
     </div>
   </section>
   <!-- Ranking Section -->
-  <section class="ranking gallery section-padding">
+  <section class="ranking gallery section-padding text-center">
     <div class="container">
-      <h5 class="section__heading text-center">トップランキング</h5>
+      <h5 class="section__heading text-center ">トップランキング</h5>
       <p class="section__sub text-center">Top Ranking</p>
+      <hr class="center-diamond">
       <div class="rank" id="rank">
         <div class="rank-item">
           <div class="rank-item__img-wrapper">
-            <img src="./assets/img/food/CN/food-cn1.jpg" class="rank-item__img">
+            <a href="recipe-single.html?rid=8" class="rank-item__img-link">
+              <img src="./assets/img/food/CN/food-cn1.jpg" class="rank-item__img">
+            </a>
           </div>
           <div class="rank-item__title">
             <span class="rank-title rank-title--ranking"><i class="rank-icon rank-icon--one fas fa-crown"></i><span
@@ -208,29 +215,35 @@
         </div>
         <div class="rank-item">
           <div class="rank-item__img-wrapper">
-            <img src="./assets/img/food/CN/food-cn2.jpg" class="rank-item__img">
+            <a href="recipe-single.html?rid=18" class="rank-item__img-link">
+              <img src="./assets/img/food/VN/vn4.jpg" class="rank-item__img">
+            </a>
           </div>
           <div class="rank-item__title">
             <span class="rank-title rank-title--ranking"><i class="rank-icon rank-icon--two fas fa-crown"></i><span
                 class="rank-num">2</span></span>
 
-            <span class="rank-title rank-title--name">中華丼</span>
+            <span class="rank-title rank-title--name">フォー</span>
           </div>
         </div>
         <div class="rank-item">
           <div class="rank-item__img-wrapper">
-            <img src="./assets/img/food/CN/food-cn3.jpg" class="rank-item__img">
+            <a href="recipe-single.html?rid=15" class="rank-item__img-link">
+              <img src="./assets/img/food/VN/vn1.jpg" class="rank-item__img">
+            </a>
           </div>
           <div class="rank-item__title">
             <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
                 class="rank-num">3</span></span>
 
-            <span class="rank-title rank-title--name">青椒肉絲</span>
+            <span class="rank-title rank-title--name">生春巻</span>
           </div>
         </div>
         <div class="rank-item">
           <div class="rank-item__img-wrapper">
-            <img src="./assets/img/food/CN/food-cn4.jpg" class="rank-item__img">
+            <a href="recipe-single.html?rid=11" class="rank-item__img-link">
+              <img src="./assets/img/food/CN/food-cn4.jpg" class="rank-item__img">
+            </a>
           </div>
           <div class="rank-item__title">
             <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
@@ -241,7 +254,9 @@
         </div>
         <div class="rank-item">
           <div class="rank-item__img-wrapper">
-            <img src="./assets/img/food/CN/food-cn5.jpg" class="rank-item__img">
+            <a href="recipe-single.html?rid=12" class="rank-item__img-link">
+              <img src="./assets/img/food/CN/food-cn5.jpg" class="rank-item__img">
+            </a>
           </div>
           <div class="rank-item__title">
             <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
@@ -252,7 +267,9 @@
         </div>
         <div class="rank-item">
           <div class="rank-item__img-wrapper">
-            <img src="./assets/img/food/CN/food-cn6.jpeg" class="rank-item__img">
+            <a href="recipe-single.html?rid=13" class="rank-item__img-link">
+              <img src="./assets/img/food/CN/food-cn6.jpeg" class="rank-item__img">
+            </a>
           </div>
           <div class="rank-item__title">
             <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
@@ -263,7 +280,9 @@
         </div>
         <div class="rank-item">
           <div class="rank-item__img-wrapper">
-            <img src="./assets/img/food/CN/food-cn7.jpg" class="rank-item__img">
+            <a href="recipe-single.html?rid=14" class="rank-item__img-link">
+              <img src="./assets/img/food/CN/food-cn7.jpg" class="rank-item__img">
+            </a>
           </div>
           <div class="rank-item__title">
             <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
@@ -274,7 +293,9 @@
         </div>
         <div class="rank-item">
           <div class="rank-item__img-wrapper">
-            <img src="./assets/img/food/JP/food-jp1.jpg" class="rank-item__img">
+            <a href="recipe-single.html?rid=1" class="rank-item__img-link">
+              <img src="./assets/img/food/JP/food-jp1.jpg" class="rank-item__img">
+            </a>
           </div>
           <div class="rank-item__title">
             <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
@@ -285,7 +306,9 @@
         </div>
         <div class="rank-item">
           <div class="rank-item__img-wrapper">
-            <img src="./assets/img/food/JP/food-jp6.jpg" class="rank-item__img">
+            <a href="recipe-single.html?rid=6" class="rank-item__img-link">
+              <img src="./assets/img/food/JP/food-jp6.jpg" class="rank-item__img">
+            </a>
           </div>
           <div class="rank-item__title">
             <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
@@ -296,7 +319,9 @@
         </div>
         <div class="rank-item">
           <div class="rank-item__img-wrapper">
-            <img src="./assets/img/food/JP/food-jp7.jpg" class="rank-item__img">
+            <a href="recipe-single.html?rid=7" class="rank-item__img-link">
+              <img src="./assets/img/food/JP/food-jp7.jpg" class="rank-item__img">
+            </a>
           </div>
           <div class="rank-item__title">
             <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
@@ -310,22 +335,24 @@
   </section>
   <!-- Gallery Section -->
   <section class="container-fluid px-0 gallery popular-section section-padding">
-    <div class="container-fluid px-0 gallery-top lemon-bg" data-aos="fade-up">
+    <div class="container-fluid px-0 gallery-top " data-aos="fade-up">
       <div class="row text-center g-0">
         <div class="col p-0">
-          <h5 class="section__heading">おすすめの料理</h5>
-          <p class="section__sub mb-4 mb-lg-5">Recommended dishes</p>
+          <h5 class="section__heading ">おすすめの料理</h5>
+          <p class="section__sub mb-3">Recommended dishes</p>
+          <hr class="center-diamond">
         </div>
       </div>
     </div>
     <div class="container-fluid container-xl g-0 gallery-grid " data-aos="fade-up">
       <div class="gallery-item" data-aos="slide-left" data-aos-duration="1400" data-aos-delay="200"
         data-aos-anchor=".gallery-grid">
-        <div class="gallery-bg" style="background: url(./assets/img/food/JP/food-jp6.JPG) no-repeat center/cover;"></div>
+        <div class="gallery-bg" style="background: url(./assets/img/food/JP/food-jp6.JPG) no-repeat center/cover;">
+        </div>
         <div class="g-caption">
           <h5 class="g-caption__heading">牛ハンバーグ</h5>
           <p class="g-caption__sub">gyu hanbagu</p>
-          <a href="#" class="white-btn"> もっと知りたい
+          <a href="#" class="main-btn"> もっと知りたい
             <i class="fas fa-arrow-right more-btn-icon"></i>
           </a>
         </div>
@@ -337,7 +364,7 @@
         <div class="g-caption">
           <h5 class="g-caption__heading ">お好み焼き</h5>
           <p class="g-caption__sub">okonomiyaki</p>
-          <a href="#" class="white-btn"> もっと知りたい
+          <a href="#" class="main-btn"> もっと知りたい
             <i class="fas fa-arrow-right more-btn-icon"></i>
           </a>
         </div>
@@ -345,11 +372,12 @@
 
       <div class="gallery-item" data-aos="slide-up" data-aos-duration="1200" data-aos-delay="200"
         data-aos-anchor=".gallery-grid">
-        <div class="gallery-bg" style="background: url(./assets/img/food/JP/food-jp3.JPG) no-repeat center/cover;"></div>
+        <div class="gallery-bg" style="background: url(./assets/img/food/JP/food-jp3.JPG) no-repeat center/cover;">
+        </div>
         <div class="g-caption">
           <h5 class="g-caption__heading">北海道海鮮丼</h5>
-          <p class="g-caption__sub">hokkaidou kaisendon</p>
-          <a href="#" class="white-btn"> もっと知りたい
+          <p class="g-caption__sub">hokkaido kaisendon</p>
+          <a href="#" class="main-btn"> もっと知りたい
             <i class="fas fa-arrow-right more-btn-icon"></i>
           </a>
         </div>
@@ -360,8 +388,8 @@
         <div class="gallery-bg" style="background: url(./assets/img/food/VN/vn5.jpg) no-repeat center/cover;"></div>
         <div class="g-caption">
           <h5 class="g-caption__heading">ブンボーフエ</h5>
-          <p class="g-caption__sub">bunbofue</p>
-          <a href="#" class="white-btn"> もっと知りたい
+          <p class="g-caption__sub">bun bo hue</p>
+          <a href="#" class="main-btn"> もっと知りたい
             <i class="fas fa-arrow-right more-btn-icon"></i>
           </a>
         </div>
@@ -369,11 +397,12 @@
 
       <div class="gallery-item" data-aos="slide-down" data-aos-duration="1600" data-aos-delay="200"
         data-aos-anchor=".gallery-grid">
-        <div class="gallery-bg" style="background: url(./assets/img/food/JP/food-jp5.JPG) no-repeat center/cover;"></div>
+        <div class="gallery-bg" style="background: url(./assets/img/food/JP/food-jp5.JPG) no-repeat center/cover;">
+        </div>
         <div class="g-caption">
           <h5 class="g-caption__heading">ほうとう</h5>
           <p class="g-caption__sub">hoto</p>
-          <a href="#" class="white-btn"> もっと知りたい
+          <a href="#" class="main-btn"> もっと知りたい
             <i class="fas fa-arrow-right more-btn-icon"></i>
           </a>
         </div>
@@ -384,8 +413,8 @@
         <div class="gallery-bg" style="background: url(./assets/img/food/VN/vn3.jpg) no-repeat center/cover;"></div>
         <div class="g-caption">
           <h5 class="g-caption__heading">バインミー</h5>
-          <p class="g-caption__sub">bainmi</p>
-          <a href="#" class="white-btn"> もっと知りたい
+          <p class="g-caption__sub">banh mi</p>
+          <a href="#" class="main-btn"> もっと知りたい
             <i class="fas fa-arrow-right more-btn-icon"></i>
           </a>
         </div>
@@ -402,16 +431,20 @@
           <h5 class="section__heading">料理をチャレンジしましょう</h5>
           <p class="section__sub">Let's challenge cooking</p>
           <p class="section__text">レシピと参考動画を提供させていただきます。正し材料や調理手順は同じとしても、人によって味も変わってくるのが料理の魅力といわれています。是非チャレンジしてください！</p>
-          <a href="#" class="more-btn"> もっと知りたい<div class=""></div>
+          <a href="recipe.html" class="more-btn"> もっと知りたい<div class=""></div>
             <i class="fas fa-arrow-right more-btn-icon"></i>
           </a>
         </div>
         <div class="col-12 col-lg-6 mt-3 mt-lg-0 mb-3 m-lg-0" data-aos="slide-left">
-          <img src="./assets/img/about-us-1.jpg" alt="" class="about-us__img img-fluid">
+          <div class="about-us__top-img">
+            <img src="./assets/img/about-us-1.jpg" alt="" class="about-us__img">
+          </div>
         </div>
         <div class="mt-5"></div>
         <div class="col-12 col-lg-6 mb-3 m-lg-0" data-aos="slide-right">
-          <img src="./assets/img/about-us-1.jpg" alt="" class="about-us__img img-fluid">
+          <div class="about-us__top-img">
+            <img src="./assets/img/explorer-bg-jp.jpg" alt="" class="about-us__img">
+          </div>
         </div>
         <div
           class="col-12 col-lg-6 px-5 d-flex flex-column justify-content-center align-items-center text-center about-us__info"
@@ -419,7 +452,7 @@
           <h5 class="section__heading">久々の旅行はいかがでしょうか</h5>
           <p class="section__sub">How about a trip after a long absence?</p>
           <p class="section__text">いろいろな国、異なる食文化。日本の中華やベトナム料理は日本人に合うようにアレンジされた料理を指します。もし本格の料理を食べたい場合、海外旅行はおすすめです。</p>
-          <a href="#" class="more-btn mb-3"> もっと知りたい
+          <a href="explorer.html" class="more-btn mb-3"> もっと知りたい
             <i class="fas fa-arrow-right more-btn-icon"></i>
           </a>
         </div>
@@ -433,7 +466,7 @@
       <div class="row">
         <div class="col-12 col-lg-6">
           <h5 class="section__heading mb-2 text-white">Subscribe to our Newsletter</h5>
-          <p class="section__text text-white">応援とフォローをお願いします！</p>
+          <p class="section__text text-white">気になった方はぜひ私達のブログに登録よろしくお願いします！</p>
           <button class="main-btn rounded-pill">SUBSCRIBE</button>
         </div>
       </div>
@@ -441,11 +474,12 @@
   </section>
   <!-- Videos Section -->
   <section class="container-fluid px-0 gallery video-section section-padding">
-    <div class="container-fluid px-0 gallery-top lemon-bg" data-aos="fade-up">
+    <div class="container-fluid px-0 gallery-top " data-aos="fade-up">
       <div class="row text-center g-0">
         <div class="col p-0">
-          <h5 class="section__heading">Video Recipes</h5>
-          <p class="section__sub mb-4 mb-lg-5">Some Trendy And Popular Video Recipes</p>
+          <h5 class="section__heading ">レシピ動画</h5>
+          <p class="section__sub mb-3">Video Recipes</p>
+          <hr class="center-diamond">
         </div>
       </div>
     </div>
@@ -457,7 +491,7 @@
         data-aos-delay="200" data-aos-anchor=".gallery-grid--video">
         <div class="gallery-bg" style="background: url(./assets/img/video1.jpg) no-repeat center/cover;"></div>
         <div class="g-caption">
-          <h5 class="g-caption__heading">富山ブラック 1</h5>
+          <h5 class="g-caption__heading">富山ブラック</h5>
           <p class="g-caption__sub">TOYAMA BLACK</p>
         </div>
         <div class="playback-btn"><img src="./assets/img/playback.png" alt="" class="playback-img img-fluid"></div>
@@ -465,38 +499,39 @@
       </div>
 
       <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#exampleModal"
-      data-bs-whatever="https://www.youtube.com/embed/0a3su4bKvd0" data-aos="slide-down" data-aos-duration="1200"
-      data-aos-delay="200" data-aos-anchor=".gallery-grid--video">
-      <div class="gallery-bg" style="background: url(./assets/img/food/VN/vno5.jpg) no-repeat center/cover;"></div>
-      <div class="g-caption">
-        <h5 class="g-caption__heading">ブンボーフエ</h5>
-        <p class="g-caption__sub">BUN BO HUE</p>
+        data-bs-whatever="https://www.youtube.com/embed/0a3su4bKvd0" data-aos="slide-down" data-aos-duration="1200"
+        data-aos-delay="200" data-aos-anchor=".gallery-grid--video">
+        <div class="gallery-bg" style="background: url(./assets/img/food/VN/vno5.jpg) no-repeat center/cover;"></div>
+        <div class="g-caption">
+          <h5 class="g-caption__heading">ブンボーフエ</h5>
+          <p class="g-caption__sub">BUN BO HUE</p>
+        </div>
+        <div class="playback-btn"><img src="./assets/img/playback.png" alt="" class="playback-img img-fluid"></div>
+        <span class="video-duration">4:13</span>
+
       </div>
-      <div class="playback-btn"><img src="./assets/img/playback.png" alt="" class="playback-img img-fluid"></div>
-      <span class="video-duration">4:13</span>
-      
-    </div>
-    
-    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#exampleModal"
-    data-bs-whatever="https://www.youtube.com/embed/VZE5b85zZBI" data-aos="slide-right" data-aos-duration="1200"
-    data-aos-delay="200" data-aos-anchor=".gallery-grid--video">
-    <div class="gallery-bg" style="background: url(./assets/img/food/CN/food-cn7.jpg) no-repeat center/cover;"></div>
-    <div class="g-caption">
-      <h5 class="g-caption__heading">酢豚</h5>
-      <p class="g-caption__sub">SUBUTA</p>
-    </div>
-    <div class="playback-btn"><img src="./assets/img/playback.png" alt="" class="playback-img img-fluid"></div>
-    <span class="video-duration">2:41</span>
-    
-  </div>
-  
-  <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#exampleModal"
-    data-bs-whatever="https://www.youtube.com/embed/EmCPHumbMvo" data-aos="slide-up" data-aos-duration="1200"
-    data-aos-delay="200" data-aos-anchor=".gallery-grid--video">
-    <div class="gallery-bg" style="background: url(./assets/img/video2.jpg) no-repeat center/cover;"></div>
-    <div class="g-caption">
-      <h5 class="g-caption__heading ">チャーハン</h5>
-      <p class="g-caption__sub">Fried Rice</p>
+
+      <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        data-bs-whatever="https://www.youtube.com/embed/VZE5b85zZBI" data-aos="slide-right" data-aos-duration="1200"
+        data-aos-delay="200" data-aos-anchor=".gallery-grid--video">
+        <div class="gallery-bg" style="background: url(./assets/img/food/CN/food-cn7.jpg) no-repeat center/cover;">
+        </div>
+        <div class="g-caption">
+          <h5 class="g-caption__heading">酢豚</h5>
+          <p class="g-caption__sub">SUBUTA</p>
+        </div>
+        <div class="playback-btn"><img src="./assets/img/playback.png" alt="" class="playback-img img-fluid"></div>
+        <span class="video-duration">2:41</span>
+
+      </div>
+
+      <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        data-bs-whatever="https://www.youtube.com/embed/EmCPHumbMvo" data-aos="slide-up" data-aos-duration="1200"
+        data-aos-delay="200" data-aos-anchor=".gallery-grid--video">
+        <div class="gallery-bg" style="background: url(./assets/img/video2.jpg) no-repeat center/cover;"></div>
+        <div class="g-caption">
+          <h5 class="g-caption__heading ">チャーハン</h5>
+          <p class="g-caption__sub">Fried Rice</p>
         </div>
         <div class="playback-btn"><img src="./assets/img/playback.png" alt="" class="playback-img img-fluid"></div>
         <span class="video-duration">1:58</span>
@@ -551,7 +586,8 @@
 
 
   <!-- Video Modal -->
-  <div class="modal px-0 fade zoom-in" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal px-0 fade zoom-in" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content">
         <iframe title="YouTube video player" frameborder="0"
