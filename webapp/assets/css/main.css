@@ -334,6 +334,7 @@ h2 {
 .g-caption__sub {
     color: var(--white-color);
     font-size: 1rem;
+    text-transform: capitalize;
 }
 .video-duration {
     position: absolute;
