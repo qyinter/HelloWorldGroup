@@ -1,10 +1,11 @@
-body{
+body {
     text-align: center;
     margin: 0px;
     background-color: black;
     color: white;
     overflow-y: hidden;
 }
+
 .main {
     text-align: center;
     position: relative;
@@ -15,6 +16,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 canvas {
     width: 100%;
     max-width: 800px;
@@ -22,10 +24,14 @@ canvas {
     max-height: 600px;
     animation: fadeIn .5s;
 }
+
 .game-container {
     position: relative;
+    box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+    
 }
-.GamePoint{
+
+.GamePoint {
     width: 100px;
     height: 100px;
     position: absolute;
@@ -33,11 +39,12 @@ canvas {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    text-shadow:  5px 5px #000;
+    text-shadow: 5px 5px #000;
     color: white;
     font-family: 'Henny Penny', cursive;
 }
-.StartImg{
+
+.StartImg {
     width: 400px;
     height: auto;
     position: absolute;
@@ -46,21 +53,25 @@ canvas {
     transform: translate(-50%, -50%);
     cursor: pointer;
 }
-#Container{
+
+#Container {
     background-color: #000;
     overflow: visible;
     display: none;
 }
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
         transform: scale(0);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
     }
 }
+
 .home-btn {
     padding: .625rem 1.875rem;
     line-height: 1.5625rem;
@@ -77,18 +88,8 @@ canvas {
     -moz-transition: all .4s ease-out 0s;
     transition: all .4s ease-out 0s;
     text-decoration: none;
-    margin-top: 30px;
+    margin-top: 40px;
     position: relative;
-}
-.game-container::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 29px;
-    background-color: #fff;
-    border-bottom: 1px Solid #696969;
+    box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+    display: none;
 }

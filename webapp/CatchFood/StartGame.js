@@ -13,11 +13,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     const StartButton = document.querySelector('.StartImg');
     const Container = document.querySelector('#Container');
+    const backBtn = document.querySelector('.home-btn');
     // document.querySelector('.GamePoint').innerHTML = GamePoint;
     StartButton = document.addEventListener('click', StartGameClick);
     function StartGameClick() {
         startAnimating(60);
         Container.style.display = 'block';
+        backBtn.style.display = 'block';
         StartButton.style.display = 'none';
     }
 })
