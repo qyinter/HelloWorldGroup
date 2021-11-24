@@ -24,15 +24,6 @@ class Object{
     }
 }
 const Char = new Object (350, 390, 64, 96, 0, 0, 10, false,0);
-    // x: 0,
-    // y: 390,
-    // width: 64,
-    // height: 96, 
-    // frameX: 0,
-    // frameY: 0,
-    // speed: 7,
-    // moving: false,
-    // step:0,
 const CharMiko = new Image();
 CharMiko.src = "img/miko.png";
 const background = new Image();
@@ -127,9 +118,6 @@ function Walk(){
     }
 }
 
-    // setTimeout(function GravityHold(){
-    //     CharGravityPoint=8;
-    // },300)
 function animated(){
     requestAnimationFrame(animated);
     now =Date.now();
@@ -152,8 +140,8 @@ function animated(){
         if (GamePoint ===20 ){
             alert('勝ちました。');
             GamePoint=0;
+            return;
         }
-        // drawStartGame(StartButtonImg,0,0,200,200,StartButton.x,StartButton.y,StartButton.width,StartButton.height);
     }
 }
 function CharGravity(){
