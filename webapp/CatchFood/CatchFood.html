@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,19 +11,22 @@
     </style>
     <title>CatchFood</title>
 </head>
+
 <body>
     <div class="warp">
         <div class="main">
-            <img src="./img/StartGame1.png" alt="" class="StartImg">
-            <div class="GamePoint">
-    
+            <div class="game-container">
+                <img src="./img/StartGame1.png" alt="" class="StartImg">
+                <div class="GamePoint"></div>
+                <canvas id="Container">
+                </canvas>
             </div>
-            <canvas id="Container">
-            </canvas>
+            <a href="../index.html" class="home-btn">ホームページに戻る</a>
         </div>
     </div>
     <script src="Main.js"></script>
     <script src="Food.js"></script>
     <script src="StartGame.js"></script>
 </body>
+
 </html>
