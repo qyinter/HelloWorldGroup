@@ -10,12 +10,14 @@
 //     width: 200,
 //     height: 200 
 // };
-document.addEventListener("DOMContentLoaded", function(){
-const StartButton = document.querySelector('.StartImg');
-// document.querySelector('.GamePoint').innerHTML = GamePoint;
-StartButton =  document.addEventListener('click',StartGameClick);
-    function StartGameClick(){
+document.addEventListener("DOMContentLoaded", function () {
+    const StartButton = document.querySelector('.StartImg');
+    const Container = document.querySelector('#Container');
+    // document.querySelector('.GamePoint').innerHTML = GamePoint;
+    StartButton = document.addEventListener('click', StartGameClick);
+    function StartGameClick() {
         startAnimating(60);
-        StartButton.style.display= 'none';
+        Container.style.display = 'block';
+        StartButton.style.display = 'none';
     }
 })
