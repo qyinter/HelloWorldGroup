@@ -1,5 +1,5 @@
 const Foods =[];
-let FoodGravityPoint = 8;
+let FoodGravityPoint = 10;
 let FoodDropSpeed =70 ; 
 const PointBonusImg = new Image();
 PointBonusImg.src =  "img/bonus1.png";
