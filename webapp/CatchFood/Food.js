@@ -38,7 +38,6 @@ class Food{
         this.PutInBox();
         this.deleteFoodAnimation();
     }
-    
     CatchFood(){
         if (this.CatchFoodKey===false) {
             if ( this.y <= Char.y +Char.height && this.y >= Char.y - this.height/2 ){
@@ -69,7 +68,7 @@ class Food{
             }
         }
     }
-    deleteFoodAnimation(){
+        deleteFoodAnimation(){
         if(this.y>=454 && frame%5===0){
             this.width = 0;
             this.height = 0;
@@ -91,7 +90,3 @@ function newFood(){
         Foods.pop();
     }
 }
-
-
-
-
