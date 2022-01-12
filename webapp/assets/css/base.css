@@ -124,10 +124,10 @@ p {
 .center-diamond {
     border: 0;
     height: 1px;
-    width: 60%;
+    width: 9.375rem;
     position: relative;
     margin: 30px auto;
-    background-color: var(--primary-color);
+    background-color: #538f2d42;
     overflow: visible !important;
     opacity: 1;
 }
